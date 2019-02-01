@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DD3D.iml" filepath="$PROJECT_DIR$/DD3D.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.zizitop.dd3d/org.zizitop.dd3d.iml" filepath="$PROJECT_DIR$/org.zizitop.dd3d/org.zizitop.dd3d.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.zizitop.desktop/org.zizitop.desktop.iml" filepath="$PROJECT_DIR$/org.zizitop.desktop/org.zizitop.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.zizitop.game/org.zizitop.game.iml" filepath="$PROJECT_DIR$/org.zizitop.game/org.zizitop.game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.zizitop.pshell/org.zizitop.pshell.iml" filepath="$PROJECT_DIR$/org.zizitop.pshell/org.zizitop.pshell.iml" />
+    </modules>
+  </component>
+</project>

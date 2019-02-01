@@ -1,0 +1,7 @@
+java.lang.IllegalArgumentException: Minimum value is larger than max value.
+	at org.zizitop.pshell/org.zizitop.pshell.utils.Utils.border(Utils.java:567)
+	at org.zizitop.game/org.zizitop.game.world.WorldRendererSimple.render(WorldRendererSimple.java:338)
+	at org.zizitop.game/org.zizitop.game.GameScene.draw(GameScene.java:60)
+	at org.zizitop.desktop/org.zizitop.desktop.JDWindow.startMainLoop(JDWindow.java:227)
+	at org.zizitop.pshell/org.zizitop.pshell.ShellApplication.launch(ShellApplication.java:131)
+	at org.zizitop.dd3d/org.zizitop.dd3d.Main.main(Main.java:23)

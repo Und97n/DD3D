@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><root>
+	<io changeable="false" code="525" defcode="525" name="test"/>
+	<io changeable="false" code="10" defcode="10" name="enter"/>
+	<io changeable="false" code="8" defcode="8" name="erase"/>
+	<io changeable="false" code="16" defcode="16" name="shift"/>
+
+	<menu>
+		<io changeable="false" code="33" defcode="33" name="selectionUp"/>
+		<io changeable="false" code="34" defcode="34" name="selectionDown"/>
+
+		<io changeable="true" code="123" defcode="123" name="screenshot"/>
+		<io changeable="true" code="115" defcode="115" name="openNewWindow"/>
+		<io changeable="true" code="122" defcode="122" name="switchFullscreen"/>
+
+		<io changeable="false" code="-1" defcode="-1" name="actionOnMenuItem"/>
+		<io changeable="false" code="-3" defcode="-3" name="actionOnMenuItemRB"/>
+		<io changeable="false" code="10" defcode="10" name="actionOnMenuItemKeyboard"/>
+
+		<io changeable="false" code="-4" defcode="-4" name="scrollUp"/>
+		<io changeable="false" code="-5" defcode="-5" name="scrollDown"/>
+
+		<io changeable="true" code="39" defcode="39" name="listNext"/>
+		<io changeable="true" code="37" defcode="37" name="listPrevious"/>
+
+		<io changeable="true" code="38" defcode="38" name="next"/>
+		<io changeable="true" code="40" defcode="40" name="previous"/>
+		
+		<io changeable="false" code="27" defcode="27" name="escape"/>
+
+		<io changeable="true" code="116" defcode="116" name="saveGame"/>
+		<io changeable="true" code="120" defcode="120" name="loadGame"/>	
+
+		<console>
+			<io changeable="true" code="114" defcode="114" name="switch"/>
+		
+			<io changeable="false" code="38" defcode="38" name="up"/>
+			<io changeable="false" code="40" defcode="40" name="down"/>	
+			<io changeable="false" code="-4" defcode="-4" name="scrollUp"/>	
+			<io changeable="false" code="-5" defcode="-5" name="scrollDown"/>
+		</console>
+		
+		<map>
+			<io changeable="true" code="77" defcode="77" name="open"/>
+
+			<io changeable="true" code="38" defcode="38" name="up"/>		
+			<io changeable="true" code="40" defcode="40" name="down"/>
+			<io changeable="true" code="37" defcode="37" name="left"/>
+			<io changeable="true" code="39" defcode="39" name="right"/>
+		</map>
+	</menu>
+
+	<game>
+		<player>
+			<io changeable="true" code="87" defcode="87" name="moveForward"/>
+			<io changeable="true" code="83" defcode="83" name="moveBackward"/>
+			<io changeable="true" code="65" defcode="65" name="moveLeft"/>
+			<io changeable="true" code="68" defcode="68" name="moveRight"/>
+
+			<io changeable="true" code="38" defcode="38" name="lookUp"/>
+			<io changeable="true" code="40" defcode="40" name="lookDown"/>
+			<io changeable="true" code="37" defcode="37" name="turnLeft"/>
+			<io changeable="true" code="39" defcode="39" name="turnRight"/>
+
+			<io changeable="true" code="9" defcode="9" name="openInventory"/>
+
+			<io changeable="true" code="69" defcode="69" name="interact"/>
+
+			<io changeable="true" code="-1" defcode="-1" name="useItem"/>
+
+			<io changeable="true" code="16" defcode="16" name="sprint"/>
+
+			<io changeable="true" code="8" defcode="8" name="dropItem"/>		
+			<io changeable="true" code="16" defcode="16" name="workWithAllStack"/>
+		</player>
+	</game>
+
+	<inventory>
+		<io changeable="true" code="-4" defcode="-4" name="next"/>
+		<io changeable="true" code="-5" defcode="-5" name="previous"/>
+
+		<io changeable="true" code="49" defcode="49" name="number1"/>
+		<io changeable="true" code="50" defcode="50" name="number2"/>
+		<io changeable="true" code="51" defcode="51" name="number3"/>
+		<io changeable="true" code="52" defcode="52" name="number4"/>
+		<io changeable="true" code="53" defcode="53" name="number5"/>
+		<io changeable="true" code="54" defcode="54" name="number6"/>
+	</inventory>
+	
+	<mapRedactor>
+			<io changeable="true" code="38" defcode="38" name="moveUp"/>
+			<io changeable="true" code="40" defcode="40" name="moveDown"/>
+			<io changeable="true" code="37" defcode="37" name="moveLeft"/>
+			<io changeable="true" code="39" defcode="39" name="moveRight"/>
+
+		<io changeable="false" code="93" defcode="93" name="nextState"/>
+		<io changeable="false" code="91" defcode="91" name="previousState"/>
+		<io changeable="false" code="76" defcode="76" name="remove"/>
+		<io changeable="false" code="80" defcode="80" name="build"/>
+
+		<io changeable="false" code="33" defcode="33" name="selectionUp"/>
+		<io changeable="false" code="34" defcode="34" name="selectionDown"/>
+	</mapRedactor>
+</root>
