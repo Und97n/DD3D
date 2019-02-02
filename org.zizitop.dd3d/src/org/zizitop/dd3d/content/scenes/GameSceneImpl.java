@@ -19,7 +19,7 @@ public class GameSceneImpl extends GameScene {
 	public static final InputOption input_saveGame = InputOption.getInputOption("menu.saveGame");
 
 	public GameSceneImpl(World world) {
-		super(() -> new WorldRendererSimple(0.73, 0.73, 320, 240), world);
+		super(() -> new WorldRendererSimple(0.73, 0.73, 640, 480), world);
 	}
 
 //	public GameSceneImpl(String saveName) throws FileLoadingException {

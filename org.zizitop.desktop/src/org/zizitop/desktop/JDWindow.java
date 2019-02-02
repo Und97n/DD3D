@@ -262,6 +262,7 @@ public class JDWindow implements org.zizitop.pshell.window.Window {
 					framesPerSecond = 0;
 					lastFPSCheck = currentTime;
 				}
+
 			}
 		} catch(Exception e) {
 			Log.write("Exception in window main loop: " + e.getClass().getSimpleName(), 4);

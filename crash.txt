@@ -1,6 +1,5 @@
-java.lang.IllegalArgumentException: Minimum value is larger than max value.
-	at org.zizitop.pshell/org.zizitop.pshell.utils.Utils.border(Utils.java:567)
-	at org.zizitop.game/org.zizitop.game.world.WorldRendererSimple.render(WorldRendererSimple.java:338)
+java.lang.ArrayIndexOutOfBoundsException: Index -133 out of bounds for length 1024
+	at org.zizitop.game/org.zizitop.game.world.WorldRendererSimple.render(WorldRendererSimple.java:403)
 	at org.zizitop.game/org.zizitop.game.GameScene.draw(GameScene.java:60)
 	at org.zizitop.desktop/org.zizitop.desktop.JDWindow.startMainLoop(JDWindow.java:227)
 	at org.zizitop.pshell/org.zizitop.pshell.ShellApplication.launch(ShellApplication.java:131)

@@ -520,12 +520,9 @@ public final class Utils {
 	 * @param minBorder - minimum value
 	 * @param maxBorder - maximum value
 	 * @return bordered value
-	 * @throws IllegalArgumentException if min > max
 	 */
 	public static double border(double value, double minBorder, double maxBorder) {
-		if(minBorder > maxBorder) {
-			throw new IllegalArgumentException("Minimum value is larger than max value.");
-		} else if(value < minBorder) {
+		if(value < minBorder) {
 			return minBorder;
 		} else if(value > maxBorder) {
 			return maxBorder;
@@ -540,12 +537,9 @@ public final class Utils {
 	 * @param minBorder - minimum value
 	 * @param maxBorder - maximum value
 	 * @return bordered value or , if min > max, NaN
-	 * @throws IllegalArgumentException if min > max
 	 */
 	public static int border(int value, int minBorder, int maxBorder) {
-		if(minBorder > maxBorder) {
-			throw new IllegalArgumentException("Minimum value is larger than max value.");
-		} else if(value < minBorder) {
+		if(value < minBorder) {
 			return minBorder;
 		} else if(value > maxBorder) {
 			return maxBorder;
@@ -560,12 +554,9 @@ public final class Utils {
 	 * @param minBorder - minimum value
 	 * @param maxBorder - maximum value
 	 * @return bordered value or , if min > max, NaN
-	 * @throws IllegalArgumentException if min > max
 	 */
 	public static long border(long value, long minBorder, long maxBorder) {
-		if(minBorder > maxBorder) {
-			throw new IllegalArgumentException("Minimum value is larger than max value.");
-		} else if(value < minBorder) {
+		if(value < minBorder) {
 			return minBorder;
 		} else if(value > maxBorder) {
 			return maxBorder;
@@ -724,5 +715,14 @@ public final class Utils {
 
 	public static class DoubleVector {
 		public double x, y;
+
+		public DoubleVector() {
+			this(0, 0);
+		}
+
+		public DoubleVector(double x, double y) {
+			this.x = x;
+			this.y = y;
+		}
 	}
 }

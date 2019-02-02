@@ -69,8 +69,8 @@ public class Camera extends Point implements MainActor {
 			cameraRotateY -= rotateSpeed;
 		}
 
-		cameraRotateX += mouseRotateSpeed * window.getMouseDx() / window.getDisplayMode().getBaseWidth();
-		cameraRotateY -= mouseRotateSpeed * window.getMouseDy() / window.getDisplayMode().getBaseHeight();
+		cameraRotateX += 0*mouseRotateSpeed * window.getMouseDx() / window.getDisplayMode().getBaseWidth();
+		cameraRotateY -= 0*mouseRotateSpeed * window.getMouseDy() / window.getDisplayMode().getBaseHeight();
 
 		angle += cameraRotateX;
 
@@ -146,8 +146,8 @@ public class Camera extends Point implements MainActor {
 		return sectorId;
 	}
 
-	@Override
-	public boolean lockUserMouse() {
-		return true;
-	}
+//	@Override
+//	public boolean lockUserMouse() {
+//		return true;
+//	}
 }

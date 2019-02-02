@@ -1,12 +1,12 @@
-01 February 2019
-[15:43 55][Important]Logging started
-[15:43 55][Important]Properties loaded.
-[15:43 55][Important]Input loading.
-[15:43 55][Important]Input loaded.
-[15:43 56][Info]Texture "font" loaded successfully.
-[15:43 56][Info]Texture "pointer1" loaded successfully.
-[15:43 57][Info]Texture "planes.walls.brick" loaded successfully.
-[15:43 57][Alert]Problems with reading startup scenario.
+02 February 2019
+[19:22 15][Important]Logging started
+[19:22 16][Important]Properties loaded.
+[19:22 16][Important]Input loading.
+[19:22 16][Important]Input loaded.
+[19:22 16][Info]Texture "font" loaded successfully.
+[19:22 16][Info]Texture "pointer1" loaded successfully.
+[19:22 17][Info]Texture "planes.walls.brick" loaded successfully.
+[19:22 17][Alert]Problems with reading startup scenario.
 
 java.io.FileNotFoundException: startup.sh (Нет такого файла или каталога)
 	at java.base/java.io.FileInputStream.open0(Native Method)
