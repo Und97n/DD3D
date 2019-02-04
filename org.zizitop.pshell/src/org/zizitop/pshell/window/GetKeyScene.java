@@ -46,7 +46,7 @@ public class GetKeyScene implements Scene, Window.GetKeyResultReceiver {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		canvas.drawBackground(background);
 		
 		double height = FONT.getHeight() * 2;

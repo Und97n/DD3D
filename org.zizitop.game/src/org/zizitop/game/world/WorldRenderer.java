@@ -13,7 +13,7 @@ public abstract class WorldRenderer {
 	/**
 	 * 2^TX_SIZE_2_LOG = TX_SIZE
 	 */
-	public static final int TX_SIZE_2_LOG = 4;
+	public static final int TX_SIZE_2_LOG = 5;
 
 	/**
 	 * Size of wall and floor textures in pixels

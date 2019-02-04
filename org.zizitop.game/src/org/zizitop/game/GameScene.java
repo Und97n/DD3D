@@ -9,6 +9,7 @@ import org.zizitop.pshell.utils.Utils;
 import org.zizitop.pshell.utils.controlling.Context;
 import org.zizitop.pshell.utils.exceptions.FileLoadingException;
 import org.zizitop.pshell.utils.exceptions.FileSavingException;
+import org.zizitop.pshell.window.DisplayMode;
 import org.zizitop.pshell.window.Scene;
 import org.zizitop.pshell.window.Window;
 
@@ -50,18 +51,19 @@ public abstract class GameScene implements Scene {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		if(worldRenderer == null || worldRenderer.isBroken()) {
 			worldRenderer = sp.get();
 		}
 
+		MainActor ma = world.getMainActor();
 		if(worldRenderer != null && !worldRenderer.isBroken()) {
-			MainActor ma = world.getMainActor();
 			worldRenderer.render(ma.getPosX(), ma.getPosY(), ma.getPosZ(),
 					ma.getHorizontalViewAngle(), ma.getVerticalViewAngle(), ma.getSectorId(), world);
 		}
 
 		canvas.draw_SC(worldRenderer.getCanvas(), 0, 0, 1, 1);
+		ma.drawInterface(canvas, displayMode, world);
 	}
 	
 	@Override

@@ -64,7 +64,7 @@ public class GetTextScene implements Scene {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		canvas.drawBackground(background);
 
 		double height = (FONT.getHeight() * 2) * message.length;

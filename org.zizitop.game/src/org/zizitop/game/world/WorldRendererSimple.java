@@ -21,7 +21,7 @@ import static java.lang.Math.min;
  */
 public class WorldRendererSimple extends WorldRenderer {
 	public static final int MAX_QUEUE = 128;
-	public static final Bitmap texture = ResourceLoader.getInstance().getTexture("planes.walls.brick");
+	public static final Bitmap texture = ResourceLoader.getInstance().getTexture("brick1"), textureFloor = ResourceLoader.getInstance().getTexture("floor1");
 	final double hfov, vfov;
 
 	double brightness = 0.08;
@@ -63,18 +63,18 @@ public class WorldRendererSimple extends WorldRenderer {
 		this.vfov = vfov;
 	}
 
-	private void drawPlanes(int beginX, int endX, double px, double py, double psin, double pcos, double view_cos, double yceil, double yfloor) {
+	private void drawPlanes(int beginX, int endX, double px, double py, double psin, double pcos, double yaw, double view_cos, double yceil, double yfloor) {
 		final int W = canvas.width;
 		final int H = canvas.height;
 
 		final int centerX = W / 2;
 		final int centerY = H / 2;
 
-		final double verticalLook = 0;
+		final double verticalLook = -yaw*H*vfov;
 
 		int[] pix = canvas.pixels;
 
-		for(int x = beginX; x < endX; ++x) {
+		for(int x = beginX; x <= endX; ++x) {
 			double cameraX = 2 * x / (double) (W) - 1;
 			cameraX *= view_cos;
 
@@ -103,8 +103,8 @@ public class WorldRendererSimple extends WorldRenderer {
 				final int texY = (int) (offsetY * TX_SIZE);
 
 				int color;
-				color = texture.pixels[(texX & (TX_SIZE - 1)) +
-						((texY & (TX_SIZE - 1)) * TX_SIZE)];
+				color = textureFloor.pixels[(texX & (TX_SIZE - 1)) +
+						((texY & (TX_SIZE - 1)) << TX_SIZE_2_LOG)];
 
 				double fog = 1.0 + dist*ray_length*brightness;
 
@@ -141,8 +141,8 @@ public class WorldRendererSimple extends WorldRenderer {
 				final int texY = (int) (offsetY * TX_SIZE);
 
 				int color;
-				color = texture.pixels[(texX & (TX_SIZE - 1)) +
-						((texY & (TX_SIZE - 1)) * TX_SIZE)];
+				color = textureFloor.pixels[(texX & (TX_SIZE - 1)) +
+						((texY & (TX_SIZE - 1)) << TX_SIZE_2_LOG)];
 
 				double fog = 1.0 + dist*ray_length*brightness;
 
@@ -267,7 +267,7 @@ public class WorldRendererSimple extends WorldRenderer {
 
 		for (int i = 0; i < W; i++) {
 			yTop[i] = yTopTmp[i] = wallStartY[i] = 0;
-			yBottom[i] = yBottomTmp[i] = wallEndY[i] = H-1;
+			yBottom[i] = yBottomTmp[i] = wallEndY[i] = H;
 		}
 
 
@@ -285,10 +285,10 @@ public class WorldRendererSimple extends WorldRenderer {
 
 		final double view_cos = 0.685*W/H;
 		final double pcos = Math.cos(hAngle), psin = Math.sin(hAngle);
-		final double nearz = 0.01, farz = 50, nearside = view_cos*nearz, farside = view_cos*(farz);
+		final double nearz = 0.001, farz = 50, nearside = view_cos*nearz, farside = view_cos*(farz);
 
 		/* Begin whole-screen rendering from where the player is. */
-		rq.push(new RenderingItem(pSectorId, 0, W-1, -10, nearz, 10, nearz));
+		rq.push(new RenderingItem(pSectorId, 0, W-1, -10, -nearz, 10, -nearz));
 
 
 		int secrorsRendered = 0;
@@ -341,7 +341,7 @@ public class WorldRendererSimple extends WorldRenderer {
 
 				final Utils.DoubleVector t1 = new Utils.DoubleVector(tx1, tz1), t2 = new Utils.DoubleVector(tx2, tz2);
 
-				if(!clipWall(now.tx1, now.tz1, now.tx2, now.tz2, t1, t2) || !clipWall(-10, nearz, 10, nearz, t1, t2)) {
+				if(!clipWall(now.tx1, now.tz1, now.tx2, now.tz2, t1, t2)) {
 					continue;
 				}
 
@@ -349,6 +349,40 @@ public class WorldRendererSimple extends WorldRenderer {
 				tz1 = t1.y;
 				tx2 = t2.x;
 				tz2 = t2.y;
+
+				if((tz1 < nearz || tz2 < nearz)) {
+					// Find an intersection between the wall and the approximate edges of player's view
+					Utils.DoubleVector i1 = new Utils.DoubleVector(), i2 = new Utils.DoubleVector();
+
+					boolean i1_condition = Utils.lineSegmentIntersection(tx1, tz1, tx2, tz2,
+							-nearside, nearz, -farside, farz, i1);
+					boolean i2_condition = Utils.lineSegmentIntersection(tx1, tz1, tx2, tz2,
+							+nearside, nearz, +farside, farz, i2);
+
+					if(tz1 < nearz) {
+						if(i2_condition) {
+							tz1 = i2.y;
+							tx1 = i2.x;
+						} else if(i1_condition) {
+							tx1 = i1.x;
+							tz1 = i1.y;
+						} else {
+							continue;
+						}
+					}
+
+					if(tz2 < nearz) {
+						if(i1_condition) {
+							tx2 = i1.x;
+							tz2 = i1.y;
+						} else if(i2_condition) {
+							tz2 = i2.y;
+							tx2 = i2.x;
+						} else {
+							continue;
+						}
+					}
+				}
 
 				/* Do perspective transformation */
 				double xscale1 = H*hfov / tz1, yscale1 = H*vfov / tz1;
@@ -373,7 +407,7 @@ public class WorldRendererSimple extends WorldRenderer {
 
 				}
 
-				final double yaw = 0;
+				final double yaw = vAngle;
 
 				/* Project our ceiling & floor Hs into screen coordinates (Y coordinate) */
 				long y1a  = H/2 - (long)((yceil + yaw*tz1) * yscale1),  y1b = H/2 - (long)((yfloor + yaw*tz1) * yscale1);
@@ -434,7 +468,7 @@ public class WorldRendererSimple extends WorldRenderer {
 
 					double wallX = (wall_intersection_x - wallX1)*wall_cos + (wall_intersection_y - wallY1)*wall_sin;
 
-					long texX = (long) (wallX * TX_SIZE);
+					int texX = (int) (wallX * TX_SIZE);
 					texX %= TX_SIZE;
 					texX += TX_SIZE;
 					texX %= TX_SIZE;
@@ -450,12 +484,13 @@ public class WorldRendererSimple extends WorldRenderer {
 					if(colorComponentDelta < 255) {
 						for(int y = cya; y < cnya; ++y) {
 							final int offset = x + y * W;
-							long texY = (long) (((y - yb + 0.0f)*y_multiplier)*TX_SIZE);
+							int texY = (int) (((y - yb + 0.0f)*y_multiplier)*TX_SIZE);
 							texY %= TX_SIZE;
 							texY += TX_SIZE;
 							texY %= TX_SIZE;
+							texY <<= TX_SIZE_2_LOG;
 
-							int color =  texture.pixels[(int) (texX + TX_SIZE*texY)];
+							int color =  texture.pixels[texX + texY];
 
 							int r = ((color & 0xff0000) >> 16);
 							int g = ((color & 0xff00) >> 8);
@@ -471,16 +506,15 @@ public class WorldRendererSimple extends WorldRenderer {
 							pix[offset] = (r << 16) + (g << 8) + (b << 0);
 						}
 
-
-
 						for(int y = cnyb; y < cyb; ++y) {
 							final int offset = x + y * W;
-							long texY = (long) (((y - yb + 0.0f)*y_multiplier)*TX_SIZE);
+							int texY = (int) (((y - yb + 0.0f)*y_multiplier)*TX_SIZE);
 							texY %= TX_SIZE;
 							texY += TX_SIZE;
 							texY %= TX_SIZE;
+							texY <<= TX_SIZE_2_LOG;
 
-							int color = texture.pixels[(int) (texX + TX_SIZE*texY)];
+							int color = texture.pixels[texX + texY];
 
 							int r = ((color & 0xff0000) >> 16);
 							int g = ((color & 0xff00) >> 8);
@@ -501,26 +535,16 @@ public class WorldRendererSimple extends WorldRenderer {
 				/* Schedule the neighboring sector for rendering within the window formed by this wall. */
 				if(wall < 0 && endx >= beginx && rq.size() < MAX_QUEUE) {
 					rq.push(new RenderingItem(-(wall + 1), beginx, endx, tx2, tz2, tx1, tz1));
-					if(-(wall+1) == 1) {
-						textToDraw.add(now.sectorId + " draws " + (-(wall+1)) + " at wall " + s + "\n");
-					}
 
 				}
 			}
 
-			drawPlanes(now.sx1, now.sx2, px, py, psin, pcos, view_cos, yceil, yfloor);
+			drawPlanes(now.sx1, now.sx2, px, py, psin, pcos, vAngle, view_cos, yceil, yfloor);
 
-			for(int xx = (int) now.sx1; xx < now.sx2; ++xx) {
-//				// Floor
-//				drawFloorVLINE(canvas.pixels, yfloor, px, py, rayX, rayY, xx, wallEndY[xx], yBottom[xx]);
-//				// Ceiling
-//				drawFloorVLINE(canvas.pixels, yceil, px, py, rayX, rayY, xx, yTop[xx], wallStartY[xx]);
-
-				final int yTop = this.yTop[xx], yBottom = this.yBottom[xx];
-
+			for(int xx = now.sx1; xx < now.sx2; ++xx) {
 				// Update only changed values
-				this.yTop[xx] = Math.max(yTop, yTopTmp[xx]);
-				this.yBottom[xx] = Math.min(yBottom, yBottomTmp[xx]);
+				yTop[xx] = Math.max(yTop[xx], yTopTmp[xx]);
+				yBottom[xx] = Math.min(yBottom[xx], yBottomTmp[xx]);
 			}
 
 

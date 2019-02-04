@@ -20,7 +20,7 @@ import java.util.function.Consumer;
  * @author Zizitop
  */
 public class Sector {
-	public static final double DEFAULT_FRICTION = 0.6;
+	public static final double DEFAULT_FRICTION = 0.1;
 	final int[] verticies;
 	final int[] walls;
 	final Sector[] neighbours;
@@ -141,6 +141,9 @@ public class Sector {
 	boolean removeSprite(Sprite s) {
 		if(spritesList == null) {
 			return false;
+		} else if(spritesList == s) {
+			spritesList = spritesList.listNext;
+			return true;
 		}
 
 		LinkedListElement prev = spritesList, list = prev.listNext;
@@ -161,6 +164,9 @@ public class Sector {
 	boolean removeStructure(Structure s) {
 		if(structuresList == null) {
 			return false;
+		} else if(structuresList == s) {
+			structuresList = structuresList.listNext;
+			return true;
 		}
 
 		LinkedListElement prev = structuresList, list = prev.listNext;
@@ -181,6 +187,9 @@ public class Sector {
 	boolean removeEntity(Entity s) {
 		if(entitiesList == null) {
 			return false;
+		} else if(entitiesList == s) {
+			entitiesList = entitiesList.listNext;
+			return true;
 		}
 
 		LinkedListElement prev = entitiesList, list = prev.listNext;

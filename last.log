@@ -1,12 +1,12 @@
-02 February 2019
-[19:22 15][Important]Logging started
-[19:22 16][Important]Properties loaded.
-[19:22 16][Important]Input loading.
-[19:22 16][Important]Input loaded.
-[19:22 16][Info]Texture "font" loaded successfully.
-[19:22 16][Info]Texture "pointer1" loaded successfully.
-[19:22 17][Info]Texture "planes.walls.brick" loaded successfully.
-[19:22 17][Alert]Problems with reading startup scenario.
+04 February 2019
+[21:42 35][Important]Logging started
+[21:42 35][Important]Properties loaded.
+[21:42 35][Important]Input loading.
+[21:42 35][Important]Input loaded.
+[21:42 40][Info]Texture "font" loaded successfully.
+[21:42 40][Info]Texture "pointer1" loaded successfully.
+[21:42 47][Info]Sound "menu.wiw" loaded successfully.
+[21:42 47][Alert]Problems with reading startup scenario.
 
 java.io.FileNotFoundException: startup.sh (Нет такого файла или каталога)
 	at java.base/java.io.FileInputStream.open0(Native Method)
@@ -15,6 +15,11 @@ java.io.FileNotFoundException: startup.sh (Нет такого файла или
 	at java.base/java.util.Scanner.<init>(Scanner.java:639)
 	at org.zizitop.pshell/org.zizitop.pshell.utils.controlling.Console.runScenario(Console.java:45)
 	at org.zizitop.pshell/org.zizitop.pshell.ShellApplication.launch(ShellApplication.java:123)
-	at org.zizitop.dd3d/org.zizitop.dd3d.Main.main(Main.java:23)
+	at org.zizitop.dd3d/org.zizitop.dd3d.Main.main(Main.java:27)
 
+[21:42 50][Info]Texture "interface/bagInterface" loaded successfully.
+[21:42 50][Info]Texture "interface/gameInterface" loaded successfully.
+[21:42 50][Info]Texture "interface/gameInterfaceHealth" loaded successfully.
+[21:42 50][Info]Texture "brick1" loaded successfully.
+[21:42 50][Info]Texture "floor1" loaded successfully.
 Logging end

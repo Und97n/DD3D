@@ -8,10 +8,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 
 /**
@@ -291,6 +288,12 @@ public final class Utils {
 	@SafeVarargs
 	public static <T> T[] asArray(T... values) {
 		return values;
+	}
+
+	public static <T> T[] toArray(Class<T> type, Collection<T> collection) {
+		T[] array = (T[]) Array.newInstance(type, collection.size());
+
+		return collection.toArray(array);
 	}
 
 	public static <T> boolean contains(T[] data, T[] elements) {

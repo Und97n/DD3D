@@ -17,6 +17,10 @@ public class Point implements Serializable {
 		this.y = y;
 		this.z = z;
 	}
+
+	public Point(double x, double y) {
+		this(x, y, 0);
+	}
 	
 	@Override
 	public String toString() {

@@ -4,6 +4,7 @@ import org.zizitop.game.MainActor;
 import org.zizitop.game.sprites.Point;
 import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Bitmap;
+import org.zizitop.pshell.window.DisplayMode;
 import org.zizitop.pshell.window.InputOption;
 import org.zizitop.pshell.window.Window;
 
@@ -38,7 +39,7 @@ public class Camera extends Point implements MainActor {
 	int sectorId = 0;
 
 	@Override
-	public void drawInterface(Bitmap canvas, Bitmap viewport, World w) {
+	public void drawInterface(Bitmap canvas, DisplayMode dm, World w) {
 
 	}
 

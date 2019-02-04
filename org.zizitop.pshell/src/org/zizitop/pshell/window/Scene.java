@@ -21,8 +21,9 @@ public interface Scene {
 	/**
 	 * Draw content on the screen
 	 * @param canvas - draw your content here
+	 * @param displayMode
 	 */
-	void draw(Bitmap canvas);
+	void draw(Bitmap canvas, DisplayMode displayMode);
 
 	default boolean lockMouse() {
 		return false;

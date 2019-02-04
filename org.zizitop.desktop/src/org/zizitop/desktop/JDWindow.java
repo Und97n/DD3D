@@ -224,7 +224,7 @@ public class JDWindow implements org.zizitop.pshell.window.Window {
 				deltaForDraw += delta * dm.getFPS();
 				
 				if(contentUpdate) {
-					currentScene.draw(screen);
+					currentScene.draw(screen, dm);
 					++framesPerSecond;
 					
 					if(SHOW_FPS_OPTION) {

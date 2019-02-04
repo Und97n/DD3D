@@ -1,8 +1,8 @@
 package org.zizitop.game.sprites;
 
 public abstract class Shell extends Entity {
-	public Shell(double x, double y, double z, double HP, double dx, double dy) {
-		super(x, y, z, HP, dx, dy);
+	public Shell(double x, double y, double z, double dx, double dy) {
+		super(x, y, z, dx, dy);
 	}
 //
 //	private static final long serialVersionUID = 1L;

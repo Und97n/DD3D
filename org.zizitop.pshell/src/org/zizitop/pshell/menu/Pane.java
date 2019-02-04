@@ -8,6 +8,7 @@ import org.zizitop.pshell.menu.ActionComponent.KeyAction;
 import org.zizitop.pshell.menu.ActionComponent.MouseAction;
 import org.zizitop.pshell.utils.Bitmap;
 import org.zizitop.pshell.utils.Utils;
+import org.zizitop.pshell.window.DisplayMode;
 import org.zizitop.pshell.window.InputOption;
 import org.zizitop.pshell.window.Scene;
 import org.zizitop.pshell.window.Window;
@@ -171,7 +172,7 @@ public class Pane implements Scene {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {		
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		canvas.fillRect_SC(getBcgColor(), 0, 0, 1, 1);
 				
 		for(int i = 0; i < components.size(); ++i) {			

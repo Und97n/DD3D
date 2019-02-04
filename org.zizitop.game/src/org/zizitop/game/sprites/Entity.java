@@ -1,27 +1,30 @@
 package org.zizitop.game.sprites;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
-
+import org.zizitop.game.sprites.abilities.AbilityHolder;
 import org.zizitop.game.world.World;
-import org.zizitop.pshell.resources.ResourceLoader;
 import org.zizitop.pshell.utils.Utils;
-import org.zizitop.pshell.window.Window;
 
 /**
- * 
+ * {@link Structure}, that is movable and each-tick-updatable.
+ * Each tick world must invoke such methods in such order:<br>
+ *     - {@link #update(World, double)}<br>
+ *     - {@link #moveStart(World, double)}<br>
+ *     - {@link #proceedCollision(World, double)}<br>
+ *     - {@link #moveEnd(World, double)}<br>
  * @author Zizitop
  *
  */
-public abstract class Entity extends BreakableStructure {
+public abstract class Entity extends Structure {
 	private static final long serialVersionUID = 1L;
 	
 	public static final double AIR_FRICTION = 0.999;
 
+	protected final AbilityHolder abilityHolder = new AbilityHolder();
+
 	public double dx, dy, accX, accY;
 	
-	public Entity(double x, double y, double z, double HP, double dx, double dy) {
-		super(x, y, z, HP);
+	public Entity(double x, double y, double z, double dx, double dy) {
+		super(x, y, z);
 		
 		this.dx = dx;
 		this.dy = dy;
@@ -31,18 +34,20 @@ public abstract class Entity extends BreakableStructure {
 	 * This method calls on every tick. Place here your AI and some another things.
 	 * @param world - current universe
 	 */
-	public void update(World world, int sectorId, double dt) {}
+	public void update(World world, double dt) {
+		abilityHolder.update(this, world);
+	}
 
 	/**
 	 * Update entity speed.
 	 * @param world - our universe
 	 * @param dt - difference in time between callings this methods.
 	 */
-	public final void moveStart(World world, int sectorId, double dt) {
+	public final void moveStart(World world, double dt) {
 		double speed = getSpeed(), maxSpeed = getMaxSpeed();
 
 		if(speed > 0) {
-			double friction = Math.min(getFrictionConst(world, sectorId), speed / dt);
+			double friction = getFrictionConst(world, sectorId)*speed / dt;
 
 			accX -= friction * (dx / speed);
 			accY -= friction * (dy / speed);
@@ -70,10 +75,17 @@ public abstract class Entity extends BreakableStructure {
 		return frictionC;
 	}
 
-	public final void proceedCollision(World world, int sectorId, double dt) {
-		if(!isSolid()) {
+	public final void proceedCollision(World world, double dt) {
+		if(!isSolid() || sectorId < 0) {
 			return;
 		}
+
+		Utils.DoubleVector dd = new Utils.DoubleVector(dx*dt, dy*dt);
+
+		world.getLevel().collideEntity(this, sectorId, dd);
+
+		dx = dd.x/dt;
+		dy = dd.y/dt;
 
 		world.getLevel().proceedNearbyStructures((s) -> proceedCollision(world, s, dt), sectorId);
 		world.getLevel().proceedNearbyEntities((e) -> proceedCollision(world, e, this, dt), sectorId);
@@ -84,7 +96,7 @@ public abstract class Entity extends BreakableStructure {
 	 * @param world - our universe
 	 * @param dt - difference in time between callings this methods.
 	 */
-	public final void moveEnd(World world, int sectorId, double dt) {
+	public final void moveEnd(World world, double dt) {
 		final double oldX = x, oldY = y;
 
 		x += dx * dt;
@@ -101,12 +113,6 @@ public abstract class Entity extends BreakableStructure {
 		accX += ax;
 		accY += ay;
 	}
-	
-	protected final void checkCollision(World w) {
-		if(!isSolid()) {
-			return;
-		}
-	}
 
 	private void proceedCollision(World w, Structure s, double dt) {
 		if(!s.isSolid()) {
@@ -115,7 +121,7 @@ public abstract class Entity extends BreakableStructure {
 
 		if(!s.isSolid()) {
 			if(s.intersects(this)) {
-				onStructureIntersection(s, w);
+				onStructureCollision(s, w);
 			}
 			return;
 		}
@@ -145,7 +151,7 @@ public abstract class Entity extends BreakableStructure {
 					double yy = oldY + (y - oldY) * collisionTime, yye = yy + sizeY;
 
 					if(yye > sy && yy < sye) {
-						onStructureIntersection(s, w);
+						onStructureCollision(s, w);
 
 						this.x = sx - sizeX;
 						this.dx = -Math.abs(dx) * elasticity;
@@ -165,7 +171,7 @@ public abstract class Entity extends BreakableStructure {
 					double yy = oldY + (y - oldY) * collisionTime, yye = yy + sizeY;
 
 					if(yye > sy && yy < sye) {
-						onStructureIntersection(s, w);
+						onStructureCollision(s, w);
 
 						this.x = sxe;
 						this.dx = Math.abs(dx) * elasticity;
@@ -188,7 +194,7 @@ public abstract class Entity extends BreakableStructure {
 					double xx = oldX + (x - oldX) * collisionTime, xxe = xx + sizeX;
 
 					if(xxe > sx && xx < sxe) {
-						onStructureIntersection(s, w);
+						onStructureCollision(s, w);
 
 						this.y = sy - sizeY;
 						this.dy = -Math.abs(dy) * elasticity;
@@ -209,7 +215,7 @@ public abstract class Entity extends BreakableStructure {
 					double xx = oldX + (x - oldX) * collisionTime, xxe = xx + sizeX;
 
 					if(xxe > sx && xx < sxe) {
-						onStructureIntersection(s, w);
+						onStructureCollision(s, w);
 
 						this.y = sye;
 						this.dy = Math.abs(dy) * elasticity;
@@ -294,11 +300,11 @@ public abstract class Entity extends BreakableStructure {
 		final boolean yIntersection = timeY1Correct || timeY2Correct || yInt || yIntOld;
 
 		if(xIntersection && yIntersection) {
-			s1.onStructureIntersection(s2, w);
-			s2.onStructureIntersection(s1, w);
+			s1.onEntityCollision(s2, w);
+			s2.onEntityCollision(s1, w);
 
-			s1.onEntityIntersection(s2, w);
-			s2.onEntityIntersection(s1, w);
+			s1.onEntityCollision(s2, w);
+			s2.onEntityCollision(s1, w);
 
 			if(!s1.isSolid() || !s2.isSolid()) {
 				return;
@@ -425,8 +431,7 @@ public abstract class Entity extends BreakableStructure {
 		}
 	}
 
-	public void onStructureIntersection(Structure s, World world) {}
-	public void onEntityIntersection(Entity s, World world) {}
+	public void onStructureCollision(Structure s, World w) {}
 	
 	public abstract double getMaxSpeed();
 	
@@ -439,4 +444,16 @@ public abstract class Entity extends BreakableStructure {
 	}
 
 	public abstract double getMass();
+
+	public AbilityHolder getAbilityHolder() {
+		return abilityHolder;
+	}
+
+	@Override
+	public void onRemoving(World world) {
+		abilityHolder.proceedAbilities(a -> a.onEntityRemoving(Entity.this, world));
+	}
+
+	public abstract double getKneeHeight();
+	public abstract double getHeight();
 }

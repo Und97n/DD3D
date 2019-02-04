@@ -4,7 +4,7 @@ import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Utils;
 
 /**
- * 
+ * Sprite, that have physics size.
  * @author Zizitop
  *
  */
@@ -89,7 +89,7 @@ public abstract class Structure extends Sprite {
 		return Math.hypot(xDist, yDist);
 	}
 	
-	public void entityCollide(Entity e, World w, double dx, double dy) {}
+	public void onEntityCollision(Entity e, World w) {}
 	
 	public abstract boolean isSolid();
 	public abstract double getSizeX();

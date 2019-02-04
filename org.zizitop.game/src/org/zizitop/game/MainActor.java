@@ -2,13 +2,14 @@ package org.zizitop.game;
 
 import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Bitmap;
+import org.zizitop.pshell.window.DisplayMode;
 import org.zizitop.pshell.window.Window;
 
 /**
  * Camera and interface holder for each world.
  */
 public interface MainActor {
-	void drawInterface(Bitmap canvas, Bitmap viewport, World w);
+	void drawInterface(Bitmap canvas, DisplayMode dm, World w);
 
 	/**
 	 * Set some option for a hero. Option list may change from one MainActor type to another.

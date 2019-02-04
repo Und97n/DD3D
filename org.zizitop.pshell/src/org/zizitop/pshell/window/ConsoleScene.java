@@ -203,7 +203,7 @@ public final class ConsoleScene implements Scene {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		canvas.drawBackground(background);
 
 		final int bufferlength = lastLineId + 1;

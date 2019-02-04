@@ -25,7 +25,7 @@ public class TestScene implements Scene {
 	}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		Arrays.fill(canvas.pixels, 0);
 		test.draw(canvas, x, y, 128, 128);
 		font.draw(canvas, x / canvas.width, y / canvas.height, "Hello World!", -1);

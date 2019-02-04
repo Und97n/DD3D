@@ -70,6 +70,10 @@ public class DisplayModeImpl extends DisplayMode {
 		return name;
 	}
 
+	public int getID() {
+		return id;
+	}
+
 	/**
 	 * Get avalible diplay mode
 	 * @param mode - id. If id is too big or too small - {@link IllegalArgumentException}

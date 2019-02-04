@@ -137,7 +137,7 @@ public class JavaDesktop implements Platform {
         	throw new NullPointerException("File name is null or empty.");
         }
 
-		if(format == null){
+		if(format == null) {
         	throw new NullPointerException("Format is null or empty.");
         }
 

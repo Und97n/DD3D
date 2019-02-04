@@ -19,8 +19,8 @@ public abstract class Enemy extends Entity {
 	
 	public double directionX, directionY;
 	
-	public Enemy(double x, double y, double z, double HP, double dx, double dy) {
-		super(x, y, z, HP, dx, dy);
+	public Enemy(double x, double y, double z, double dx, double dy) {
+		super(x, y, z, dx, dy);
 		
 		aiTimeCounter = (int) (Math.random() * TICKS_PER_AI_UPDATE);
 		
@@ -28,7 +28,7 @@ public abstract class Enemy extends Entity {
 	}
 
 	@Override
-	public void update(World world, int sectorId, double dt) {
+	public void update(World world, double dt) {
 		++aiTimeCounter;
 
 		while(aiTimeCounter >= TICKS_PER_AI_UPDATE ) {

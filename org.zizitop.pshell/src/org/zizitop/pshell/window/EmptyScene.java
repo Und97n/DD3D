@@ -18,7 +18,7 @@ public class EmptyScene implements Scene {
 	public void tick(Window w) {}
 
 	@Override
-	public void draw(Bitmap canvas) {
+	public void draw(Bitmap canvas, DisplayMode displayMode) {
 		canvas.fillRect_SC(0x0, 0, 0, 1, 1);
 		DDFont.DEFAULT_FONT.draw(canvas, 0.5, 0.5, "Empty Scene", -1);
 	}
