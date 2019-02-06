@@ -38,15 +38,6 @@
 			<io changeable="false" code="-4" defcode="-4" name="scrollUp"/>	
 			<io changeable="false" code="-5" defcode="-5" name="scrollDown"/>
 		</console>
-		
-		<map>
-			<io changeable="true" code="77" defcode="77" name="open"/>
-
-			<io changeable="true" code="38" defcode="38" name="up"/>		
-			<io changeable="true" code="40" defcode="40" name="down"/>
-			<io changeable="true" code="37" defcode="37" name="left"/>
-			<io changeable="true" code="39" defcode="39" name="right"/>
-		</map>
 	</menu>
 
 	<game>
@@ -85,19 +76,4 @@
 		<io changeable="true" code="53" defcode="53" name="number5"/>
 		<io changeable="true" code="54" defcode="54" name="number6"/>
 	</inventory>
-	
-	<mapRedactor>
-			<io changeable="true" code="38" defcode="38" name="moveUp"/>
-			<io changeable="true" code="40" defcode="40" name="moveDown"/>
-			<io changeable="true" code="37" defcode="37" name="moveLeft"/>
-			<io changeable="true" code="39" defcode="39" name="moveRight"/>
-
-		<io changeable="false" code="93" defcode="93" name="nextState"/>
-		<io changeable="false" code="91" defcode="91" name="previousState"/>
-		<io changeable="false" code="76" defcode="76" name="remove"/>
-		<io changeable="false" code="80" defcode="80" name="build"/>
-
-		<io changeable="false" code="33" defcode="33" name="selectionUp"/>
-		<io changeable="false" code="34" defcode="34" name="selectionDown"/>
-	</mapRedactor>
 </root>

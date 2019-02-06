@@ -12,7 +12,7 @@ import org.zizitop.pshell.window.Window;
  *
  */
 public class TextArea extends TextLabel implements ActionComponent {	
-	protected static final InputOption input_earse = InputOption.getInputOption("earse");
+	protected static final InputOption input_erase = InputOption.getInputOption("erase");
 	
 	private StringBuilder builder;
 	
@@ -39,7 +39,7 @@ public class TextArea extends TextLabel implements ActionComponent {
 		String s = window.getLastEnteredText();
 		
 		if(selected) {
-			if(window.getActionsCount(input_earse) > 0) {
+			if(window.getActionsCount(input_erase) > 0) {
 				if(text.length() > 0) {
 					builder.deleteCharAt(text.length() - 1);
 				} else {

@@ -8,6 +8,7 @@ import org.zizitop.pshell.resources.ResourceLoader;
 import org.zizitop.pshell.resources.Sound;
 import org.zizitop.pshell.utils.Bitmap;
 import org.zizitop.pshell.utils.Lang;
+import org.zizitop.pshell.utils.Rectangle;
 import org.zizitop.pshell.window.DisplayMode;
 
 import java.io.Serializable;
@@ -19,7 +20,7 @@ import java.io.Serializable;
  */
 public abstract class Item implements Serializable, TexturedObject {
 	private static final long serialVersionUID = 1L;
-	
+
 	public static final int defaultWidthInHands = 64;
 	
 	public static final Sound pickupSound = ResourceLoader.getInstance().getSound("pickup");
@@ -68,15 +69,15 @@ public abstract class Item implements Serializable, TexturedObject {
 	public void drawIcon(Bitmap canvas, double x, double y, double width, double height) {
 		canvas.draw_SC(getItemTexture(), x, y, width, height);
 	}
-	
-//	public void drawInHands(Bitmap canvas, int xOffset, int yOffset) {
-//		Bitmap tx = getItemTexture();
-//
-//		int w = (int) (canvas.width * (double)defaultWidthInHands / DisplayMode.BASE_VIEWPORT_WIDTH);
-//		int h = (int) (canvas.height * (defaultWidthInHands * (tx.width / (double)tx.height)) / DisplayMode.BASE_VIEWPORT_HEIGHT);
-//
-//		canvas.draw(tx, xOffset + canvas.width / 2 - w / 2, canvas.height - h + yOffset, w, h);
-//	}
+
+	public void drawInHands(DisplayMode dm, Bitmap canvas, int xOffset, int yOffset) {
+		Bitmap tx = getItemTexture();
+
+		int w = (int) (canvas.width * (double)defaultWidthInHands / dm.getBaseViewportWidth());
+		int h = (int) (canvas.height * (defaultWidthInHands * (tx.width / (double)tx.height)) / dm.getBaseViewportHeight());
+
+		canvas.draw(tx, xOffset + canvas.width / 2 - w / 2, canvas.height - h + yOffset, w, h);
+	}
 
 	public void addToTheWorld(World w, double x, double y) {
 		addToTheWorld(w, x, y, false);

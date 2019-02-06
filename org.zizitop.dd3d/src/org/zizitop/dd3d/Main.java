@@ -28,7 +28,7 @@ public class Main {
 	}
 
 	public static void start(Window window) {
-		window.changeScene(new MainMenu().createScene(null));
+		window.changeScene(MainMenu.getGameScene(getDisplayMode()));
 	}
 
 	public static DisplayMode getDisplayMode() {

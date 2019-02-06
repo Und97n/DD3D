@@ -37,12 +37,14 @@ public class Steve extends Player {
 	}
 
 	@Override
-	public void drawInterface(Bitmap canvas, DisplayMode dm, World w) {
+	public void drawInterface(Bitmap canvas, Bitmap viewport, DisplayMode dm, World w) {
+		canvas.draw(viewport, 0, 0, viewport.width, viewport.height);
 		var playerSpecialAbilities = abilityHolder.getAbilities(PlayerSpecialAbility.class);
 
 		for(PlayerSpecialAbility psa: playerSpecialAbilities) {
 			psa.drawInterface(this, dm, canvas);
 		}
+
 	}
 
 	@Override
@@ -154,12 +156,12 @@ public class Steve extends Player {
 
 	@Override
 	public double getSizeX() {
-		return 0.4;
+		return 1;
 	}
 
 	@Override
 	public double getSizeY() {
-		return 0.4;
+		return 1;
 	}
 
 	@Override

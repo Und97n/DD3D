@@ -3,101 +3,52 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java" line="355" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3b0bb4de-8e01-4870-a9c6-fc6b36f0551e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GraphicsOptionsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InputOptionsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InventoryScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/KeyInputOptionsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/LoadMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/OptionsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/PauseMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/SaveMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/SoundOptionsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemStorageAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/PickupAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/StackableItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/Ability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/DeathAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/HealthAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/PlayerSpecialAbility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/IntPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/WeaponFist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/config.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/last.log" beforeDir="false" afterPath="$PROJECT_DIR$/last.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JavaDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JavaDesktop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Shell.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Shell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/AbilityHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/AbilityHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRendererSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRendererSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/ConsoleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/ConsoleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/EmptyScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/EmptyScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/GetKeyScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/GetKeyScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/GetTextScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/GetTextScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/TestScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/TestScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/TextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/TextArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/DisplayMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/DisplayMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/DisplayModeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/DisplayModeImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/content/mainActors/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/content/mainActors/Camera.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/content/scenes/GameSceneImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.dd3d/org/zizitop/dd3d/content/scenes/GameSceneImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.desktop/org/zizitop/desktop/JDWindow$MainCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.desktop/org/zizitop/desktop/JDWindow$MainCanvas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.desktop/org/zizitop/desktop/JDWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.desktop/org/zizitop/desktop/JDWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameScene$GameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameScene$GameContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/GameUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/MainActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/MainActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/BreakableStructure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/EnemyWithStateAnimation.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Shell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Shell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Sprite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Structure.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/sprites/Structure.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/Sector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/Sector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/WorldRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/WorldRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/WorldRendererSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.game/org/zizitop/game/world/WorldRendererSimple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/menu/Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/menu/Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/utils/Utils$DoubleVector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/utils/Utils$DoubleVector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/ConsoleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/ConsoleScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/EmptyScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/EmptyScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/GetKeyScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/GetKeyScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/GetTextScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/GetTextScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/Scene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/TestScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/TestScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/menu/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/menu/TextArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/DisplayMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/org.zizitop.pshell/org/zizitop/pshell/window/DisplayMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/input.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,67 +67,115 @@
     <session id="-857163850">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="204" />
+          <entry key="java" value="243" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="204" />
+          <entry key="JAVA" value="243" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="29478" />
-          <entry key="txt" value="4" />
+          <entry key="java" value="33344" />
+          <entry key="txt" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="29478" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="JAVA" value="33344" />
+          <entry key="PLAIN_TEXT" value="46" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GraphicsOptionsMenu.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="56" selection-end-column="45" />
+            <state relative-caret-position="383">
+              <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+            <state relative-caret-position="1170">
+              <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1268">
+              <caret line="148" column="21" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
               <folding>
-                <element signature="e#1521#1522#0" expanded="true" />
-                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#3079#3080#0" expanded="true" />
+                <element signature="e#3141#3142#0" expanded="true" />
+                <element signature="e#4988#4989#0" expanded="true" />
+                <element signature="e#5033#5034#0" expanded="true" />
+                <element signature="e#5079#5080#0" expanded="true" />
+                <element signature="e#5116#5117#0" expanded="true" />
+                <element signature="e#5164#5165#0" expanded="true" />
+                <element signature="e#5203#5204#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+              <folding>
+                <element signature="e#6299#6300#0" expanded="true" />
+                <element signature="e#6329#6330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="663" column="5" selection-start-line="663" selection-start-column="5" selection-end-line="663" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -184,84 +183,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+            <state relative-caret-position="225">
+              <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1036#1037#0" expanded="true" />
-                <element signature="e#1077#1078#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/LoadMenu.java">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="750">
+              <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/KeyInputOptionsMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InventoryScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="104" column="92" selection-start-line="104" selection-start-column="92" selection-end-line="104" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
+                <element signature="e#1911#1912#0" expanded="true" />
+                <element signature="e#1972#1973#0" expanded="true" />
+                <element signature="e#2006#2007#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InputOptionsMenu.java">
+        <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="645">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -292,6 +244,9 @@
       <find>System</find>
       <find>renderer.camera.verticalLook</find>
       <find>Point</find>
+      <find>earse</find>
+      <find>InventoryOwner</find>
+      <find>24</find>
     </findStrings>
     <replaceStrings>
       <replace>long</replace>
@@ -311,6 +266,9 @@
       <replace>8</replace>
       <replace>yaw</replace>
       <replace>IntPoint</replace>
+      <replace>erase</replace>
+      <replace>Entity</replace>
+      <replace>10</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -319,24 +277,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/module-info.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Player.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Shell.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRenderer.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/WorldRendererSimple.java" />
         <option value="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JavaDesktop.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/DeathAbility.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/PickupAbility.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/StackableItem.java" />
         <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/Scene.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/InventoryScene.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Point.java" />
         <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/IntPoint.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Key.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/HotbarInventory.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/InventoryOwner.java" />
@@ -345,31 +295,39 @@
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemHolder.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/World.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Player.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemStorage.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemStorageAbility.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/PlayerSpecialAbility.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/HealthAbility.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/HotbarInventory.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Inventory.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Enemy.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/AbilityHolder.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Camera.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InventoryScene.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/LoadMenu.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GraphicsOptionsMenu.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java" />
-        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/TextArea.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameUtils.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/WeaponFist.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/DisplayMode.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java" />
         <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java" />
         <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java" />
+        <option value="$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java" />
       </list>
     </option>
   </component>
@@ -406,6 +364,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -465,6 +424,24 @@
               <item name="dd3d" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DD3D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DD3D" type="462c0819:PsiDirectoryNode" />
+              <item name="org.zizitop.desktop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DD3D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DD3D" type="462c0819:PsiDirectoryNode" />
+              <item name="org.zizitop.desktop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DD3D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DD3D" type="462c0819:PsiDirectoryNode" />
+              <item name="org.zizitop.desktop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="desktop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DD3D" type="b2602c69:ProjectViewProjectNode" />
@@ -541,19 +518,26 @@
               <item name="org.zizitop.pshell" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pshell" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DD3D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DD3D" type="462c0819:PsiDirectoryNode" />
+              <item name="org.zizitop.pshell" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pshell" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549309494230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549463363357" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -614,7 +598,7 @@
     <frame x="-1" y="0" width="1878" height="1081" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22161572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23362446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -622,9 +606,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34064785" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.23197491" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23197491" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49945414" weight="0.3291536" />
@@ -639,130 +623,14 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32969433" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32969433" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32969433" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32969433" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-11-jdk/lib/src.zip!/java.base/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/DeathAbility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="209" column="12" selection-start-line="209" selection-start-column="12" selection-end-line="209" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/StackableItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="226" column="48" selection-start-line="226" selection-start-column="48" selection-end-line="226" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/InventoryScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/IntPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/PickupAbility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Key.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-11-jdk/lib/src.zip!/java.base/java/time/chrono/HijrahEra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
@@ -770,13 +638,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/InventoryOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/InventoryOwner.java" />
     <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -788,9 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,32 +660,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/ItemStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#proceedCollision#1;class#Entity#0" />
-            <element signature="method#proceedCollision#2;class#Entity#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,9 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,9 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,12 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,96 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="295" column="34" lean-forward="true" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/AbilityHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-390">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#3668#3669#0" expanded="true" />
-            <element signature="e#3694#3695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#3243#3244#0" expanded="true" />
-            <element signature="e#5348#5349#0" expanded="true" />
-            <element signature="e#5397#5398#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
-          <folding>
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#3215#3216#0" expanded="true" />
-            <element signature="e#3230#3231#0" expanded="true" />
-            <element signature="e#3284#3285#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
-            <element signature="e#3359#3360#0" expanded="true" />
-            <element signature="e#3376#3377#0" expanded="true" />
-            <element signature="e#3419#3420#0" expanded="true" />
-            <element signature="e#3435#3436#0" expanded="true" />
-            <element signature="e#3474#3475#0" expanded="true" />
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3590#3591#0" expanded="true" />
-            <element signature="e#3608#3609#0" expanded="true" />
-            <element signature="e#3648#3649#0" expanded="true" />
-            <element signature="e#3665#3666#0" expanded="true" />
-            <element signature="e#3705#3706#0" expanded="true" />
-            <element signature="e#3722#3723#0" expanded="true" />
-            <element signature="e#3766#3767#0" expanded="true" />
-            <element signature="e#3783#3784#0" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-            <element signature="e#3845#3846#0" expanded="true" />
-            <element signature="e#3886#3887#0" expanded="true" />
-            <element signature="e#3903#3904#0" expanded="true" />
-            <element signature="e#3949#3950#0" expanded="true" />
-            <element signature="e#3967#3968#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,29 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-            <element signature="e#1956#1957#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2512#2513#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1028,17 +744,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InventoryScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="104" column="92" selection-start-line="104" selection-start-column="92" selection-end-line="104" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InputOptionsMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/KeyInputOptionsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1056,62 +772,248 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/KeyInputOptionsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/MainActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/TextAreaForInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JavaDesktop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/menu/TextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.desktop/src/org/zizitop/desktop/JDWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="361" column="39" selection-start-line="361" selection-start-column="39" selection-end-line="361" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/animation/StateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/GameUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <caret line="90" column="41" lean-forward="true" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/WeaponNear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/WeaponFist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/abilities/AbilityHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/DisplayModeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-          <folding>
-            <element signature="e#1521#1522#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/InventoryScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="104" column="92" selection-start-line="104" selection-start-column="92" selection-end-line="104" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/inventory/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        <state relative-caret-position="345">
+          <caret line="30" column="82" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/scenes/GameSceneImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/window/DisplayMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/Hotbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/inventory/InventoryPlayerBag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+          <folding>
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/TexturedObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Structure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/sprites/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.pshell/src/org/zizitop/pshell/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="663" column="5" selection-start-line="663" selection-start-column="5" selection-end-line="663" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Sector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding>
+            <element signature="e#6299#6300#0" expanded="true" />
+            <element signature="e#6329#6330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.game/src/org/zizitop/game/world/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1268">
+          <caret line="148" column="21" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
+          <folding>
+            <element signature="e#3079#3080#0" expanded="true" />
+            <element signature="e#3141#3142#0" expanded="true" />
+            <element signature="e#4988#4989#0" expanded="true" />
+            <element signature="e#5033#5034#0" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5116#5117#0" expanded="true" />
+            <element signature="e#5164#5165#0" expanded="true" />
+            <element signature="e#5203#5204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.zizitop.dd3d/src/org/zizitop/dd3d/content/mainActors/Steve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="163" column="16" selection-start-line="163" selection-start-column="16" selection-end-line="163" selection-end-column="16" />
         </state>
       </provider>
     </entry>

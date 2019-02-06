@@ -50,7 +50,7 @@ public final class MainMenu extends StandardMenuBuilder {
 	
 	public static Scene getGameScene(DisplayMode dm) {
 		double[] verts = {
-				-24, 24, 24, 24, -24, -24, 24, -24,
+				-10, 10, 10, 10, -10, -10, 10, -10,
 
 				-4, 4, 4, 4, -4, -4, 4, -4,
 				-3, 4, 3, 4, -3, -4, 3, -4,
@@ -58,7 +58,7 @@ public final class MainMenu extends StandardMenuBuilder {
 				-4, 3, 4, 3, -4, -3, 4, -3,
 				-5, -3, -5, 3,
 				-6, -3, -6, 3,
-				-6, -24, -6, 24,
+				-6, -10, -6, 10,
 		};
 
 		int[][] walls = {
@@ -103,7 +103,7 @@ public final class MainMenu extends StandardMenuBuilder {
 		l.add(hero);
 		World world = new World(l, hero);
 
-		return new GameSceneImpl(world);
+		return new GameSceneImpl(world, dm);
 	}
 
 	@Override

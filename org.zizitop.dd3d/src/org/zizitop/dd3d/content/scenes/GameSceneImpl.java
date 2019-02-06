@@ -5,6 +5,7 @@ import org.zizitop.game.world.World;
 import org.zizitop.game.world.WorldRendererSimple;
 import org.zizitop.pshell.utils.Bitmap;
 import org.zizitop.pshell.utils.exceptions.FileLoadingException;
+import org.zizitop.pshell.window.DisplayMode;
 import org.zizitop.pshell.window.InputOption;
 import org.zizitop.pshell.window.Window;
 
@@ -18,8 +19,8 @@ public class GameSceneImpl extends GameScene {
 	public static final InputOption input_escape = InputOption.getInputOption("menu.escape");
 	public static final InputOption input_saveGame = InputOption.getInputOption("menu.saveGame");
 
-	public GameSceneImpl(World world) {
-		super(() -> new WorldRendererSimple(0.73, 0.73, 640, 480), world);
+	public GameSceneImpl(World world, DisplayMode dm) {
+		super(() -> new WorldRendererSimple(0.73, 0.73, dm.getViewportWidth(), dm.getViewportHeight()), world);
 	}
 
 //	public GameSceneImpl(String saveName) throws FileLoadingException {

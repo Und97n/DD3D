@@ -3,9 +3,11 @@ package org.zizitop.game.world;
 import org.zizitop.game.sprites.Entity;
 import org.zizitop.game.sprites.Sprite;
 import org.zizitop.game.sprites.Structure;
+import org.zizitop.pshell.utils.Rectangle;
 import org.zizitop.pshell.utils.Utils;
 
-import java.util.function.BiConsumer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -18,6 +20,61 @@ public class Level {
 	final double[] verticies;
 	final Sector[] sectors;
 
+	private static final class Wall {
+		final double x1, y1, x2, y2;
+
+		double nx, ny;
+
+		private Wall(double x1, double y1, double x2, double y2) {
+			this.x1 = x1;
+			this.y1 = y1;
+			this.x2 = x2;
+			this.y2 = y2;
+		}
+
+		public boolean collideVector(double x, double y, Utils.DoubleVector velocity) {
+			Utils.DoubleVector tmp = new Utils.DoubleVector();
+
+			if (!Utils.lineSegmentIntersection(x1, y1, x2, y2, x, y, x + velocity.x, y + velocity.y, tmp)) {
+				return false;
+			}
+
+			if (nx == 0 && ny == 0) {
+				nx = y2 - y1;
+				ny = x1 - x2;
+
+				double nn = Math.hypot(nx, ny);
+				nx /= nn;
+				ny /= nn;
+			}
+
+			double clippedX = (x + velocity.x - tmp.x);
+
+			if (clippedX * nx > 0) {
+				clippedX = 0;
+			}
+
+			double clippedY = (y + velocity.y - tmp.y);
+
+			if (clippedY * ny > 0) {
+				clippedY = 0;
+			}
+
+			if (clippedX == 0 && clippedY == 0) {
+				return false;
+			}
+
+			double p = (clippedX * ny - clippedY * nx);
+
+			velocity.x -= clippedX * 1.1;
+			velocity.y -= clippedY * 1.1;
+			velocity.x += +p * ny;
+			velocity.y += -p * nx;
+
+			return true;
+		}
+	}
+
 	public Level(double[] verticies, Sector[] sectors) {
 		this.verticies = verticies;
 		this.sectors = sectors;
@@ -27,69 +84,73 @@ public class Level {
 		}
 	}
 
-	public boolean collideEntity(Entity e, int sectorId, Utils.DoubleVector velocity) {
+	public void collideEntity(Entity e, int sectorId, Utils.DoubleVector velocity) {
+		if(velocity.x == 0 && velocity.y == 0) {
+			return;
+		}
+
 		final double ssx = e.getSizeX()/2, ssy = e.getSizeY()/2;
 
 		Sector s = sectors[sectorId];
 
-		boolean c = false;
+		double speed = Math.hypot(velocity.x, velocity.y);
 
-		c = c || collideVector(s, e.x + ssx, e.y + ssy, velocity);
-		c = c || collideVector(s, e.x - ssx, e.y + ssy, velocity);
-		c = c || collideVector(s, e.x + ssx, e.y - ssy, velocity);
-		c = c || collideVector(s, e.x - ssx, e.y - ssy, velocity);
+		double aabbSizeX = speed + ssx;
+		double aabbSizeY = speed + ssy;
+
+		ArrayList<Wall> walls = new ArrayList<>();
+
+		double ex1 = e.x - aabbSizeX, ey1 = e.y - aabbSizeY, ex2 = e.x + aabbSizeX, ey2 = e.y + aabbSizeY;
+
+		proceedNearWalls(walls, e, s, ex1, ey1, ex2, ey2);
 
 		for(Sector ss: s.neighbours) {
-			c = c || collideVector(ss, e.x + ssx, e.y + ssy, velocity);
-			c = c || collideVector(ss, e.x - ssx, e.y + ssy, velocity);
-			c = c || collideVector(ss, e.x + ssx, e.y - ssy, velocity);
-			c = c || collideVector(ss, e.x - ssx, e.y - ssy, velocity);
+			proceedNearWalls(walls, e, ss, ex1, ey1, ex2, ey2);
 		}
 
-		return c;
+		int iterations = 0, maxIterations = 5;
+		boolean c;
+
+		do {
+			c = false;
+			for(Wall w: walls) {
+				c = c || w.collideVector(e.x + ssx, e.y + ssy, velocity);
+				c = c || w.collideVector(e.x - ssx, e.y + ssy, velocity);
+				c = c || w.collideVector(e.x + ssx, e.y - ssy, velocity);
+				c = c || w.collideVector(e.x - ssx, e.y - ssy, velocity);
+			}
+
+			if(c && ++iterations >= maxIterations) {
+				velocity.x = velocity.y = 0;
+				break;
+			}
+		} while(c);
 	}
 
-	public boolean collideVector(Sector s, double x, double y, Utils.DoubleVector velocity) {
+	private void proceedNearWalls(List<Wall> wallsList, Entity e, Sector ss, double ex1, double ey1, double ex2, double ey2) {
 		int i, j;
-		int nvert = s.verticies.length;
 
-		boolean c = false;
-
-		Utils.DoubleVector tmp = new Utils.DoubleVector();
-
-		for(i = 1, j = 0; i < nvert; j = i++) {
-			if(s.walls[j] < 0) {
+		for(i = 1, j = 0; i < ss.verticies.length; j = i++) {
+			if(ss.walls[j] < 0) {
 				continue;
 			}
 
-			int iv = s.verticies[i];
-			int jv = s.verticies[j];
+			int iv = ss.verticies[i];
+			int jv = ss.verticies[j];
 
 			double ix = verticies[iv*2 + 0], iy = verticies[iv*2 + 1];
 			double jx = verticies[jv*2 + 0], jy = verticies[jv*2 + 1];
 
+			double wx1 = Math.min(ix, jx), wx2 = Math.max(ix, jx);
+			double wy1 = Math.min(iy, jy), wy2 = Math.max(iy, jy);
 
-			if(Utils.lineSegmentIntersection(ix, iy, jx, jy, x, y, x + velocity.x, y + velocity.y, tmp)) {
-				double nx = jy - iy;
-				double ny = ix - jx;
-
-				double nn = Math.hypot(nx, ny);
-				nx /= nn;
-				ny /= nn;
-
-				double clippedX = (x + velocity.x - tmp.x);
-				double clippedY = (y + velocity.y - tmp.y);
-
-				final double vcp = clippedX*nx + clippedY*ny - 0.01;
-
-				velocity.x -= nx*vcp;
-				velocity.y -= ny*vcp;
-
-				c = true;
+			if(
+					(ex2 >= wx1 && ex1 <= wx2) &&
+					(ey2 >= wy1 && ey1 <= wy2)
+			) {
+				wallsList.add(new Wall(ix, iy, jx, jy));
 			}
 		}
-
-		return c;
 	}
 
 	/**

@@ -9,7 +9,10 @@ import org.zizitop.pshell.window.Window;
  * Camera and interface holder for each world.
  */
 public interface MainActor {
-	void drawInterface(Bitmap canvas, DisplayMode dm, World w);
+	/**
+	 * Draw interface and 3d projection canvas to the main canvas.
+	 */
+	void drawInterface(Bitmap canvas, Bitmap viewport, DisplayMode dm, World w);
 
 	/**
 	 * Set some option for a hero. Option list may change from one MainActor type to another.

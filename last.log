@@ -1,12 +1,26 @@
-04 February 2019
-[21:42 35][Important]Logging started
-[21:42 35][Important]Properties loaded.
-[21:42 35][Important]Input loading.
-[21:42 35][Important]Input loaded.
-[21:42 40][Info]Texture "font" loaded successfully.
-[21:42 40][Info]Texture "pointer1" loaded successfully.
-[21:42 47][Info]Sound "menu.wiw" loaded successfully.
-[21:42 47][Alert]Problems with reading startup scenario.
+06 February 2019
+[23:26 26][Important]Logging started
+[23:26 26][Important]Properties loaded.
+[23:26 26][Important]Input loading.
+[23:26 26][Important]Input loaded.
+[23:26 27][Info]Texture "font" loaded successfully.
+[23:26 27][Info]Texture "pointer1" loaded successfully.
+[23:26 27][Info]Texture "interface/bagInterface" loaded successfully.
+[23:26 27][Info]Texture "interface/gameInterface" loaded successfully.
+[23:26 27][Info]Texture "interface/gameInterfaceHealth" loaded successfully.
+[23:26 27][Info]Sound "pickup" loaded successfully.
+[23:26 27][Info]Sound "whoosh" loaded successfully.
+[23:26 27][Info]Sound "punch" loaded successfully.
+[23:26 27][Info]Texture "/weapon/hands/hand_0" loaded successfully.
+[23:26 27][Info]Texture "weapon.hands.hand_0" loaded successfully.
+[23:26 27][Info]Texture "weapon.hands.hand_1" loaded successfully.
+[23:26 27][Info]Texture "weapon.hands.hand_2" loaded successfully.
+[23:26 28][Info]Texture "weapon.hands.hand1_0" loaded successfully.
+[23:26 28][Info]Texture "weapon.hands.hand1_1" loaded successfully.
+[23:26 28][Info]Texture "weapon.hands.hand1_2" loaded successfully.
+[23:26 28][Info]Texture "brick1" loaded successfully.
+[23:26 28][Info]Texture "floor1" loaded successfully.
+[23:26 28][Alert]Problems with reading startup scenario.
 
 java.io.FileNotFoundException: startup.sh (Нет такого файла или каталога)
 	at java.base/java.io.FileInputStream.open0(Native Method)
@@ -17,9 +31,4 @@ java.io.FileNotFoundException: startup.sh (Нет такого файла или
 	at org.zizitop.pshell/org.zizitop.pshell.ShellApplication.launch(ShellApplication.java:123)
 	at org.zizitop.dd3d/org.zizitop.dd3d.Main.main(Main.java:27)
 
-[21:42 50][Info]Texture "interface/bagInterface" loaded successfully.
-[21:42 50][Info]Texture "interface/gameInterface" loaded successfully.
-[21:42 50][Info]Texture "interface/gameInterfaceHealth" loaded successfully.
-[21:42 50][Info]Texture "brick1" loaded successfully.
-[21:42 50][Info]Texture "floor1" loaded successfully.
 Logging end

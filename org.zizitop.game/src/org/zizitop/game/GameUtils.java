@@ -8,6 +8,8 @@ import java.util.function.Predicate;
 import org.zizitop.game.sprites.Entity;
 import org.zizitop.game.sprites.Sprite;
 import org.zizitop.game.sprites.Structure;
+import org.zizitop.game.sprites.abilities.HealthAbility;
+import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Utils;
 import org.zizitop.pshell.window.Scene;
 import org.zizitop.pshell.window.Window;
@@ -19,37 +21,39 @@ import org.zizitop.pshell.window.Window;
  * @author Zizitop
  */
 public class GameUtils {
-//	/**
-//	 * Function for melee attack.
-//	 * @param actor - agressive entity
-//	 * @param w - current universe
-//	 * @param damage - damage of the attack
-//	 * @param rectX - x postion of attack rectangle top left corner
-//	 * @param rectY - y postion of attack rectangle top left corner
-//	 * @param rectWidth - width of the attack rectange
-//	 * @param rectHeight - width of the attack rectange
-//	 * @param condition - condition of attack for every structure(don't put collision checking, it included!)
-//	 * @return true if attack succes
-//	 */
-//	public static final boolean meleeAttack(Object actor, World w, double damage, double rectX, double rectY,
-//			double rectWidth, double rectHeight, Predicate<Structure> condition) {
-//
-//		// For changing in lambda
-//		final AtomicBoolean attackSucces = new AtomicBoolean(false);
-//
-//		Consumer<Structure> action = s -> {
-//			if(!attackSucces.get() && s != actor && condition.test(s)) {
-//				if(s instanceof BreakableStructure && s.intersects(rectX, rectY, rectWidth, rectHeight)) {
-//					if(condition.test(s)) {
-//						((BreakableStructure) s).damage(damage, w);
-//						attackSucces.set(true);
-//					}
-//				}
-//			}
-//		};
-//
-//		w.proceedChunkStructures(action, rectX, rectY);
-//
+	/**
+	 * Function for melee attack.
+	 * @param actor - agressive entity
+	 * @param w - current universe
+	 * @param damage - damage of the attack
+	 * @param rectX - x postion of attack rectangle top left corner
+	 * @param rectY - y postion of attack rectangle top left corner
+	 * @param rectWidth - width of the attack rectange
+	 * @param rectHeight - width of the attack rectange
+	 * @param condition - condition of attack for every structure(don't put collision checking, it included!)
+	 * @return true if attack succes
+	 */
+	public static final boolean meleeAttack(Entity actor, World w, double damage, double rectX, double rectY,
+	                                        double rectWidth, double rectHeight, Predicate<Structure> condition) {
+
+		// For changing in lambda
+		final AtomicBoolean attackSucces = new AtomicBoolean(false);
+
+		Consumer<Entity> action = s -> {
+			if(!attackSucces.get() && s != actor && condition.test(s)) {
+				if(s.intersects(rectX, rectY, rectWidth, rectHeight)) {
+					HealthAbility[] ha = s.getAbilityHolder().getAbilities(HealthAbility.class);
+
+					if(ha.length > 0 && condition.test(s)) {
+						ha[0].damage(damage);
+						attackSucces.set(true);
+					}
+				}
+			}
+		};
+
+		w.getLevel().proceedNearbyEntities(action, actor.sectorId);
+//      TODO
 //		// Get walls with collision
 //		if(true) {
 //			final int xBegin = Utils.floor(rectX);
@@ -75,9 +79,9 @@ public class GameUtils {
 //				}
 //			}
 //		}
-//
-//		return attackSucces.get();
-//	}
+
+		return attackSucces.get();
+	}
 	
 	/**
 	 * Add sprite to the needed list. Use this for adding any sprite.

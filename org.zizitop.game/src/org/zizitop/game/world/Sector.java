@@ -5,6 +5,7 @@ import org.zizitop.game.sprites.Entity;
 import org.zizitop.game.sprites.LinkedListElement;
 import org.zizitop.game.sprites.Sprite;
 import org.zizitop.game.sprites.Structure;
+import org.zizitop.pshell.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,7 +24,7 @@ public class Sector {
 	public static final double DEFAULT_FRICTION = 0.1;
 	final int[] verticies;
 	final int[] walls;
-	final Sector[] neighbours;
+	Sector[] neighbours;
 	final double floor, ceiling;
 	int id;
 
@@ -43,18 +44,6 @@ public class Sector {
 		this.spritesList = spritesList;
 		this.structuresList = structuresList;
 		this.entitiesList = entitiesList;
-
-		int neighboursCount = 0;
-
-		for(int i = 0; i < walls.length; ++i) {
-			int wall = walls[i];
-
-			if(wall < 0) {
-				++neighboursCount;
-			}
-		}
-
-		neighbours = new Sector[neighboursCount];
 	}
 
 	/**
@@ -62,17 +51,31 @@ public class Sector {
 	 */
 	void init(Level level, int id) {
 		this.id = id;
-
-		int j = 0;
+		ArrayList<Sector> neighbours = new ArrayList<>();
 
 		for(int i = 0; i < walls.length; ++i) {
 			int wall = walls[i];
 
 			if(wall < 0) {
-				neighbours[j++] = level.sectors[-(wall + 1)];
+				// Remove duplicates
+				boolean put = true;
+
+				Sector ss = level.sectors[-(wall + 1)];
+
+				for(Sector s: neighbours) {
+					if(s == ss) {
+						put = false;
+						break;
+					}
+				}
+
+				if(put) {
+					neighbours.add(ss);
+				}
 			}
 		}
 
+		this.neighbours = Utils.toArray(Sector.class, neighbours);
 	}
 
 	void add(Sprite s) {

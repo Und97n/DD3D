@@ -62,8 +62,7 @@ public abstract class GameScene implements Scene {
 					ma.getHorizontalViewAngle(), ma.getVerticalViewAngle(), ma.getSectorId(), world);
 		}
 
-		canvas.draw_SC(worldRenderer.getCanvas(), 0, 0, 1, 1);
-		ma.drawInterface(canvas, displayMode, world);
+		ma.drawInterface(canvas, worldRenderer.getCanvas(), displayMode, world);
 	}
 	
 	@Override

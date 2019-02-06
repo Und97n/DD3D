@@ -3,6 +3,8 @@ package org.zizitop.dd3d;
 import org.zizitop.pshell.utils.Lang;
 import org.zizitop.pshell.window.DisplayMode;
 
+import java.nio.Buffer;
+
 /**
  * Implementation of a {@link DisplayMode}, that is used for resolution switching.
  * <br><br>
@@ -11,7 +13,10 @@ import org.zizitop.pshell.window.DisplayMode;
  * @author Zizitop
  */
 public class DisplayModeImpl extends DisplayMode {
-	public static final int BASE_WIDTH = 640, BASE_HEIGHT = 480, FPS = 60;
+	public static final int BASE_WIDTH = 640, BASE_HEIGHT = 360, FPS = 60,
+			BASE_VIEWPORT_WIDTH = 640, BASE_VIEWPORT_HEIGHT = 300;
+	public static double VIEWPORT_ASPECT_X = BASE_VIEWPORT_WIDTH/(double)BASE_WIDTH,
+						VIEWPORT_ASPECT_Y = BASE_VIEWPORT_HEIGHT/(double)BASE_HEIGHT;
 
 	private static final DisplayModeImpl[] avalibleDisplayModes;
 
@@ -51,6 +56,16 @@ public class DisplayModeImpl extends DisplayMode {
 	}
 
 	@Override
+	public int getViewportWidth() {
+		return (int) (width*VIEWPORT_ASPECT_X);
+	}
+
+	@Override
+	public int getViewportHeight() {
+		return (int) (height*VIEWPORT_ASPECT_Y);
+	}
+
+	@Override
 	public int getBaseWidth() {
 		return BASE_WIDTH;
 	}
@@ -58,6 +73,16 @@ public class DisplayModeImpl extends DisplayMode {
 	@Override
 	public int getBaseHeight() {
 		return BASE_HEIGHT;
+	}
+
+	@Override
+	public int getBaseViewportWidth() {
+		return BASE_VIEWPORT_WIDTH;
+	}
+
+	@Override
+	public int getBaseViewportHeight() {
+		return BASE_VIEWPORT_HEIGHT;
 	}
 
 	@Override

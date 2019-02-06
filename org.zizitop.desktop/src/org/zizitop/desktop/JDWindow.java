@@ -332,28 +332,43 @@ public class JDWindow implements org.zizitop.pshell.window.Window {
 		if(this.fullscreen == fullscreen) {
 			 return;
 		} else {
+			GraphicsDevice gd = GraphicsEnvironment
+					.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+
+
 			this.fullscreen = fullscreen;
-			
+
 			if(fullscreen) {
-				if(initialized) {
-					frame.dispose();
+				if(!gd.isFullScreenSupported()) {
+					return;
 				}
-				
-				frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				frame.setUndecorated(true);
-				
-				frame.setVisible(true);
+//
+//				if(initialized) {
+//					frame.dispose();
+//				}
+
+
+//				frame.setVisible(false);
+
+				gd.setFullScreenWindow(frame);
+//				frame.setVisible(true);
+//
+//				frame.setFocusable(true);
 			} else {
-				if(initialized) {
-					frame.dispose();
-				}
-				
-				frame.setExtendedState(0);
-				frame.setSize(width, height);
-				frame.setLocationRelativeTo(null);
-				frame.setUndecorated(false);	
-				
-				frame.setVisible(true);
+//				if(initialized) {
+//					frame.dispose();
+//				}
+//
+//				frame.setVisible(false);
+				gd.setFullScreenWindow(null);
+
+//				frame.setExtendedState(0);
+//				frame.setSize(width, height);
+//				frame.setLocationRelativeTo(null);
+//				frame.setUndecorated(false);
+//
+//				frame.setVisible(true);
+//				frame.setFocusable(true);
 			}
 		}
 	}

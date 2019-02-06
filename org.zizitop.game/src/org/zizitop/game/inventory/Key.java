@@ -14,7 +14,7 @@
 //	protected boolean used = false;
 //
 //	@Override
-//	public void action(InventoryOwner hero, World w) {
+//	public void action(Entity hero, World w) {
 //		if(!used && hero instanceof Camera.CameraHolder) {
 //			Camera cam = ((Camera.CameraHolder) hero).getCamera();
 //			//Find eyes target

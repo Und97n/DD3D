@@ -34,9 +34,7 @@ public abstract class Entity extends Structure {
 	 * This method calls on every tick. Place here your AI and some another things.
 	 * @param world - current universe
 	 */
-	public void update(World world, double dt) {
-		abilityHolder.update(this, world);
-	}
+	public void update(World world, double dt) {}
 
 	/**
 	 * Update entity speed.
@@ -44,6 +42,8 @@ public abstract class Entity extends Structure {
 	 * @param dt - difference in time between callings this methods.
 	 */
 	public final void moveStart(World world, double dt) {
+		abilityHolder.update(this, world);
+
 		double speed = getSpeed(), maxSpeed = getMaxSpeed();
 
 		if(speed > 0) {

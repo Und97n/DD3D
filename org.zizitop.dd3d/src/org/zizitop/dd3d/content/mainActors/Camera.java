@@ -39,7 +39,7 @@ public class Camera extends Point implements MainActor {
 	int sectorId = 0;
 
 	@Override
-	public void drawInterface(Bitmap canvas, DisplayMode dm, World w) {
+	public void drawInterface(Bitmap canvas, Bitmap viewport, DisplayMode dm, World w) {
 
 	}
 

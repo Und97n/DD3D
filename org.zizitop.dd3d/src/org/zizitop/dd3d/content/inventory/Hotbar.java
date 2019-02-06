@@ -93,6 +93,9 @@ public class Hotbar implements Serializable {
 	}
 
 	public void drawItemBar(Entity owner, Bitmap canvas, DisplayMode dm) {
+		if(getCurrentItem() != null) {
+			getCurrentItem().drawInHands(dm, canvas, 0, dm.getViewportHeight()-dm.getContentHeight());
+		}
 
 		double scaleX = (double)canvas.width / dm.getBaseWidth();
 		double scaleY = (double)canvas.height / dm.getBaseHeight();
@@ -100,7 +103,7 @@ public class Hotbar implements Serializable {
 		int itWidth = (int) (interfaceTexture.width * scaleX);
 		int itHeight = (int) (interfaceTexture.height * scaleY);
 
-		canvas.draw(interfaceTexture, 0, canvas.height - itHeight, itWidth, itHeight);
+		canvas.draw(interfaceTexture, 0, dm.getBaseViewportHeight(), dm.getContentWidth(), dm.getContentHeight() - dm.getBaseViewportHeight());
 
 		/*canvas.draw(healthTexture, (Main.MIN_WIDTH - healthTexture.width - 2) * scaleX,
 				(Main.MIN_HEIGHT - healthTexture.height - 3) * scaleY,
@@ -182,22 +185,21 @@ public class Hotbar implements Serializable {
 			}
 		}
 
-		if(updateSelectedItem(w, hero)) {
-			playerInventory.replaceItem(null, currentItem);
-		}
+		updateSelectedItem(w, hero);
 	}
 
-	private boolean updateSelectedItem(World w, Entity hero) {
+	private void updateSelectedItem(World w, Entity hero) {
 		Item i = getCurrentItem();
 
 		if(i == null) {
-			return false;
+			return;
 		}
 
 		i.update(hero, w);
 
 		if(i.needDeleteFromInventory()) {
-			return true;
+			playerInventory.replaceItem(null, currentItem);
+			return;
 		}
 
 		if(useItemWasReleased) {
@@ -210,29 +212,22 @@ public class Hotbar implements Serializable {
 			double x = hero.x;
 			double y = hero.y;
 
-			double dx = 0, dy = 0;
-
-			if(hero instanceof Entity) {
-				dx = ((Entity) hero).dx;
-				dy = ((Entity) hero).dy;
-			}
-
 			if(!workWithAllStack && i instanceof StackableItem) {
 				final StackableItem droped = ((StackableItem)i).split(1);
 
 				if(droped != null && !droped.isEmpty()) {
 					droped.addToTheWorld(w, x, y, true);
 
-					return ((StackableItem)i).isEmpty();
+					if(((StackableItem)i).isEmpty()) {
+						playerInventory.replaceItem(null, currentItem);
+					}
 				}
 			} else {
 				i.addToTheWorld(w, x, y, true);
 
-				return true;
+				playerInventory.replaceItem(null, currentItem);
 			}
 		}
-
-		return false;
 	}
 
 	public void checkInput(Window window, Entity hero) {

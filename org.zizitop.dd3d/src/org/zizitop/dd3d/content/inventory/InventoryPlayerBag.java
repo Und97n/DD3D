@@ -51,7 +51,7 @@ public class InventoryPlayerBag extends Inventory implements ItemStorageAbility,
 	public InventoryPlayerBag() {
 		super(SLOTS_X_COUNT, SLOTS_Y_COUNT);
 
-		hotbar = new Hotbar(null, this);
+		hotbar = new Hotbar(new WeaponFist(), this);
 	}
 
 	@Override
