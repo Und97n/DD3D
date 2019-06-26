@@ -21,6 +21,11 @@ public abstract class Entity extends Structure {
 
 	protected final AbilityHolder abilityHolder = new AbilityHolder();
 
+	protected double zSpeed = 0.02;
+
+	protected double floorZ = 0;
+	protected double walkZ = 0;
+	protected double walkZDelta = 0.11;
 	public double dx, dy, accX, accY;
 	
 	public Entity(double x, double y, double z, double dx, double dy) {
@@ -42,7 +47,39 @@ public abstract class Entity extends Structure {
 	 * @param dt - difference in time between callings this methods.
 	 */
 	public final void moveStart(World world, double dt) {
-		abilityHolder.update(this, world);
+		z = getHeight();
+
+		if(walkZ <= -0.1) {
+			walkZDelta = Math.abs(walkZDelta);
+		} else if(walkZ >= 0.1) {
+			walkZDelta = -Math.abs(walkZDelta);
+		}
+		walkZ += walkZDelta * getSpeed()*dt;
+
+		z += walkZ;
+
+		final double realZ = world.getLevel().getFloorLevel(sectorId);
+
+		final double dzSpeed = 10*dt;
+
+		if(floorZ > realZ) {
+			if(floorZ - realZ >= dzSpeed) {
+				floorZ -= dzSpeed;
+			} else {
+				floorZ = realZ;
+			}
+		} else if(floorZ < realZ) {
+			if(realZ - floorZ >= dzSpeed) {
+				floorZ += dzSpeed;
+
+			} else {
+				floorZ = realZ;
+			}
+		}
+
+		z += floorZ;
+
+		abilityHolder.update(this, world, dt);
 
 		double speed = getSpeed(), maxSpeed = getMaxSpeed();
 

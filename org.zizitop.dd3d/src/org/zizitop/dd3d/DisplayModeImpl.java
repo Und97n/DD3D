@@ -13,8 +13,8 @@ import java.nio.Buffer;
  * @author Zizitop
  */
 public class DisplayModeImpl extends DisplayMode {
-	public static final int BASE_WIDTH = 640, BASE_HEIGHT = 360, FPS = 60,
-			BASE_VIEWPORT_WIDTH = 640, BASE_VIEWPORT_HEIGHT = 300;
+	public static final int BASE_WIDTH = 320, BASE_HEIGHT = 180, FPS = 60,
+			BASE_VIEWPORT_WIDTH = 320, BASE_VIEWPORT_HEIGHT = 150;
 	public static double VIEWPORT_ASPECT_X = BASE_VIEWPORT_WIDTH/(double)BASE_WIDTH,
 						VIEWPORT_ASPECT_Y = BASE_VIEWPORT_HEIGHT/(double)BASE_HEIGHT;
 

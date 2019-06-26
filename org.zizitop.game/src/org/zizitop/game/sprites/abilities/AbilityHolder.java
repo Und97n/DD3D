@@ -5,7 +5,6 @@ import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -73,13 +72,13 @@ public class AbilityHolder {
 	 * @param owner owner of this holder
 	 * @param world owner of owner of this holder
 	 */
-	public void update(Entity owner, World world) {
+	public void update(Entity owner, World world, double dt) {
 		var iterator = abilities.iterator();
 
 		while(iterator.hasNext()) {
 			Ability e = iterator.next();
 
-			e.update(owner, world);
+			e.update(owner, world, dt);
 
 			// Remove ability if it is needed
 			if(e.needRemove()) {

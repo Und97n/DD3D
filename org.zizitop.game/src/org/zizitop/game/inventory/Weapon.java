@@ -3,7 +3,6 @@ package org.zizitop.game.inventory;
 import org.zizitop.game.sprites.Entity;
 import org.zizitop.game.world.World;
 import org.zizitop.pshell.utils.Bitmap;
-import org.zizitop.pshell.utils.Rectangle;
 import org.zizitop.pshell.utils.animation.StateManager;
 import org.zizitop.pshell.window.DisplayMode;
 
@@ -43,8 +42,8 @@ public abstract class Weapon extends Item implements StateManager.StateManagerHe
 	}
 
 	@Override
-	public void update(Entity hero, World w) {
-		animation.update();
+	public void update(Entity hero, World w, double dt) {
+		animation.update(dt);
 	}
 
 	@Override

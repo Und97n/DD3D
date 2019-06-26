@@ -1,6 +1,5 @@
 package org.zizitop.game.inventory;
 
-import org.zizitop.game.MainActor;
 import org.zizitop.game.sprites.Entity;
 import org.zizitop.game.sprites.TexturedObject;
 import org.zizitop.game.world.World;
@@ -8,7 +7,6 @@ import org.zizitop.pshell.resources.ResourceLoader;
 import org.zizitop.pshell.resources.Sound;
 import org.zizitop.pshell.utils.Bitmap;
 import org.zizitop.pshell.utils.Lang;
-import org.zizitop.pshell.utils.Rectangle;
 import org.zizitop.pshell.window.DisplayMode;
 
 import java.io.Serializable;
@@ -31,8 +29,9 @@ public abstract class Item implements Serializable, TexturedObject {
 	 * Update item(used for updating selected item in hotbar)
 	 * @param hero - owner
 	 * @param w - universe with this item
+	 * @param dt
 	 */
-	public void update(Entity hero, World w) {}
+	public void update(Entity hero, World w, double dt) {}
 	
 	/**
 	 * This method runs when player take in hands another item

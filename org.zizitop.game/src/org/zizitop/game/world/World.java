@@ -2,6 +2,7 @@ package org.zizitop.game.world;
 
 import org.zizitop.game.MainActor;
 import org.zizitop.game.sprites.Entity;
+import org.zizitop.game.sprites.Point;
 import org.zizitop.game.sprites.Sprite;
 import org.zizitop.game.sprites.Structure;
 import org.zizitop.game.sprites.abilities.Ability;
@@ -93,13 +94,9 @@ public class World {
 				if(!level.updatePosition(ee, i)) {
 					Log.write("Entity " + ee + " is outside the map. It will be removed.", 2);
 				} else {
-					DeathAbility[] deathAbilities = ee.getAbilityHolder().getAbilities(DeathAbility.class);
-					// If our Entity is dead.
-					for(DeathAbility a: deathAbilities) {
-						if(a.ownerIsDead()) {
-							remove(ee);
-							break;
-						}
+					if(DeathAbility.entityIsDead(ee)) {
+						// If our Entity is dead.
+						remove(ee);
 					}
 				}
 			}
@@ -139,6 +136,10 @@ public class World {
 		}
 
 		addedObjects.clear();
+	}
+
+	public boolean isPointVisible(Sprite viewer, Point target) {
+		return !level.lineIntersectsWalls(viewer.sectorId, viewer.x, viewer.y, target.x, target.y);
 	}
 
 	/**

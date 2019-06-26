@@ -60,8 +60,8 @@ public class InventoryPlayerBag extends Inventory implements ItemStorageAbility,
 	}
 
 	@Override
-	public void update(Entity owner, World world) {
-		hotbar.update(world, owner);
+	public void update(Entity owner, World world, double dt) {
+		hotbar.update(world, owner, dt);
 	}
 
 	public Item getSelectedItem() {

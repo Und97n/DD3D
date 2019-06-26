@@ -45,7 +45,7 @@ public class GameUtils {
 					HealthAbility[] ha = s.getAbilityHolder().getAbilities(HealthAbility.class);
 
 					if(ha.length > 0 && condition.test(s)) {
-						ha[0].damage(damage);
+						ha[0].damage(damage, actor);
 						attackSucces.set(true);
 					}
 				}

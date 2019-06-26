@@ -24,7 +24,7 @@ public abstract class Enemy extends Entity {
 		
 		aiTimeCounter = (int) (Math.random() * TICKS_PER_AI_UPDATE);
 		
-//		ai = new EnemyAI(this);
+		ai = new EnemyAI(this);
 	}
 
 	@Override
@@ -32,15 +32,15 @@ public abstract class Enemy extends Entity {
 		++aiTimeCounter;
 
 		while(aiTimeCounter >= TICKS_PER_AI_UPDATE ) {
-//			ai.updateAI(world);
+			ai.updateAI(world);
 
 			aiTimeCounter -= TICKS_PER_AI_UPDATE;
 		}
 
-//		if(ai.hasTagret()) {
-//			dx = ai.getTargetX() - x;
-//			dy = ai.getTargetY() - y;
-//		}
+		if(ai.hasTagret()) {
+			dx = ai.getTargetX() - x;
+			dy = ai.getTargetY() - y;
+		}
 	}
 
 	public boolean isMoving() {

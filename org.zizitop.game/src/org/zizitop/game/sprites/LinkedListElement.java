@@ -7,7 +7,11 @@ package org.zizitop.game.sprites;
  *
  * @author Zizitop
  */
-public class LinkedListElement {
+public abstract class LinkedListElement extends Point {
 	// Next object in linked list. If not needed - can be null
 	public LinkedListElement listNext;
+
+	public LinkedListElement(double x, double y, double z) {
+		super(x, y, z);
+	}
 }

@@ -1,5 +1,6 @@
 package org.zizitop.dd3d.content.scenes;
 
+import org.zizitop.dd3d.content.enemies.EnemyBat;
 import org.zizitop.dd3d.content.inventory.InventoryPlayerBag;
 import org.zizitop.dd3d.content.mainActors.Steve;
 import org.zizitop.game.sprites.abilities.HealthAbility;
@@ -99,8 +100,12 @@ public final class MainMenu extends StandardMenuBuilder {
 		hero.getAbilityHolder().addAbility(new InventoryPlayerBag());
 		hero.getAbilityHolder().addAbility(new HealthAbility(100, 100));
 
+		EnemyBat bat = new EnemyBat(6, 6);
+		bat.getAbilityHolder().addAbility(new HealthAbility(20, 20));
+
 		Level l = new Level(verts, sectors);
 		l.add(hero);
+		l.add(bat);
 		World world = new World(l, hero);
 
 		return new GameSceneImpl(world, dm);

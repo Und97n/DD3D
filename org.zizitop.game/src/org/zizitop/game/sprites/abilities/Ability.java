@@ -15,8 +15,9 @@ public interface Ability {
 	 * Update method. Run`s on each game tick.
 	 * @param owner owner of this ability
 	 * @param world owner of owner of this ability
+	 * @param dt
 	 */
-	default void update(Entity owner, World world) {}
+	default void update(Entity owner, World world, double dt) {}
 
 	/**
 	 * If return value is true - this ability will be removed from the holder on the next game tick.

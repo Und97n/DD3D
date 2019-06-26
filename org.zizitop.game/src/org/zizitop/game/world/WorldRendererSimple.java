@@ -1,5 +1,7 @@
 package org.zizitop.game.world;
 
+import org.zizitop.game.sprites.LinkedListElement;
+import org.zizitop.game.sprites.Sprite;
 import org.zizitop.pshell.resources.ResourceLoader;
 import org.zizitop.pshell.utils.Bitmap;
 import org.zizitop.pshell.utils.DDFont;
@@ -11,6 +13,9 @@ import java.util.Arrays;
 import java.util.Deque;
 
 import static java.lang.Math.min;
+import static org.zizitop.pshell.utils.Bitmap.PRECISION;
+import static org.zizitop.pshell.utils.Bitmap.PRECISION_2LOG;
+import static org.zizitop.pshell.utils.Bitmap.TRANSPARENT_COLOR;
 
 /**
  * Simple realization of a 3d engine.
@@ -170,6 +175,200 @@ public class WorldRendererSimple extends WorldRenderer {
 		}
 	}
 
+	public void drawSprite(Sprite s, double px, double py, double pz, double psin, double pcos, double yaw, double view_cos, final World world) {
+		if (!s.isVisible()) {
+			return;
+		}
+
+		final int screenWidth = canvas.width, screenHeight = canvas.height;
+
+		//Center of the screen
+		final int centerX = screenWidth / 2;
+		final int centerY = screenHeight / 2;
+
+		//Screen
+		final int[] pixels = canvas.pixels;
+
+		final int verticalLook = (int) (-yaw*vfov*screenHeight);
+
+		final double fogMultiper = 0.5;
+
+		//For fog
+		final int intFogMultiper = (int)(fogMultiper * PRECISION);
+		final int intBrightness = (int)(brightness * PRECISION);
+
+		Bitmap texture = s.getTexture();
+
+		if (texture == null) {
+			return;
+		}
+
+		final double cameraZ = -pz;
+
+		// throw new Error("Fuck you.");
+		int[] texturePixels = texture.pixels;
+
+		// Texture size
+		final int textureWidth = texture.width;
+		final int textureHeight = texture.height;
+
+
+		final double scaleX = (double) textureWidth / (double) TX_SIZE;
+		final double scaleY = (double) textureHeight / (double) TX_SIZE;
+
+		final double spriteX = s.x - px;
+		final double spriteY = s.y - py;
+
+		double planeX = 0, planeY = view_cos;
+		double oldPlaneX = planeX;
+		planeX = planeX*pcos - planeY*psin;
+		planeY = oldPlaneX*psin + planeY*pcos;
+
+
+		// transform sprite with the inverse camera matrix
+		// [ planeX dirX ] -1 [ dirY -dirX ]
+		// [ ] = 1/(planeX*dirY-dirX*planeY) * [ ]
+		// [ planeY dirY ] [ -planeY planeX ]
+
+		// required for correct matrix multiplication
+		final double invDet = (planeX * psin - pcos * planeY);
+
+		double transformX = (psin * spriteX - pcos * spriteY) / invDet;
+		double transformY = (-planeY * spriteX + planeX * spriteY) / invDet;
+		// this is actually the depth inside the screen, that what Z is in 3D
+
+		double near = 0.01;
+
+		if(transformY > 0 && transformY < near) {
+			transformY = near;
+		}
+
+		if(transformY < 0){
+			return;
+		}
+
+		final int spriteScreenX = (int) (centerX * (1.0 + transformX / transformY));
+
+		final int spriteHeight = Math.abs((int) (scaleY * screenHeight / (transformY)));
+
+		int deltaForHeight = (int) (spriteHeight / scaleY * (cameraZ)) + (int) (s.z / transformY * screenHeight);
+		int spriteYDelta = (int) (textureHeight * deltaForHeight);
+
+		// Sprite on the screen start y-coordinate
+		int drawStartY = -spriteHeight / 2 + centerY + verticalLook - deltaForHeight;
+		if(drawStartY < 0) {
+			drawStartY = 0;
+		}
+
+		// Sprite on the screen end y-coordinate
+		int drawEndY = spriteHeight / 2 + centerY + verticalLook - deltaForHeight;
+		if (drawEndY >= screenHeight) {
+			drawEndY = screenHeight - 1;
+		}
+
+		final int spriteWidth = Math.abs((int) (scaleX / (2 * -invDet) * screenWidth / (transformY)));
+
+		// Sprite on the screen start x-coordinate
+		int drawStartX = -spriteWidth / 2 + spriteScreenX;
+		if(drawStartX < 0) {
+			drawStartX = 0;
+		}
+
+		// Sprite on the screen end x-coordinate
+		int drawEndX = spriteWidth / 2 + spriteScreenX;
+		if (drawEndX < 0) {
+			return;
+		}
+
+		if(drawEndX >= screenWidth) {
+			if(drawEndX >= screenWidth + spriteWidth) {
+				return;
+			} else {
+				drawEndX = screenWidth - 1;
+			}
+		}
+
+		int fog = PRECISION;
+
+		//For optimization we don't use fog if it do noting with colours
+		boolean useFogM = true;
+
+//		if(true) {
+//			//fog = (PRECISION * intBrightness) / (int)(dist * intFogMultiper);
+//			fog = intBrightness - (int)(transformY * intFogMultiper);
+//
+//			if(fog > PRECISION) {
+//				useFogM = false;
+//			} else if (fog < 0) {
+//				fog = 0;
+//
+//				for(int x = drawStartX; x < drawEndX; ++x) {
+//					if(transformY > 0 && x > 0 && x < screenWidth && transformY < zBufferWall[x]) {
+//						for(int y = drawStartY; y < drawEndY; y++) {
+//							if (transformY < zBuffer[x + y * screenWidth]) {
+//								pixels[x + y * screenWidth] = 0;
+//								zBuffer[x + y * screenWidth] = transformY;
+//							}
+//						}
+//					}
+//				}
+//
+//				return;
+//			}
+//		}
+
+		// Draw vertical stripes
+		for(int x = drawStartX; x < drawEndX;++x) {
+			// Texture pixel x-coordinate
+			final int texX = ((x - (-spriteWidth / 2 + spriteScreenX)) * textureWidth) / spriteWidth;
+			// Check wall z-buffer and another paramethers
+			if(transformY > 0 && x > 0 && x < screenWidth && transformY < zBufferWall[x]) {
+				// Draw vertical stripe
+				for(int y = drawStartY; y < drawEndY; y++) {
+
+					// Check sprites z-buffer
+					if (transformY < zBuffer[x + y * screenWidth]) {
+						// Texture pixel y-coordinate
+
+						final int texY = (((y - centerY + (spriteHeight >> 1) - (verticalLook)) * textureHeight
+								+ spriteYDelta) / (spriteHeight));
+
+
+						// Pixel color
+						int color = texturePixels[(texY * textureWidth) + texX];
+
+						if (color != TRANSPARENT_COLOR) {
+							// Fill z-buffer
+							zBuffer[x + y * screenWidth] = transformY;
+
+							// Calculate fog
+//							if(useFogM) {
+//								int r = (color & 0xff0000) >> 16;
+//								int g = (color & 0xff00) >> 8;
+//								int b = (color & 0xff);
+//
+//								r *= fog;
+//								g *= fog;
+//								b *= fog;
+//
+//								r >>>= PRECISION_2LOG;
+//								g >>>= PRECISION_2LOG;
+//								b >>>= PRECISION_2LOG;
+//
+//								color = (r << 16) | (g << 8) + b;
+//							}
+
+							// Draw pixel
+							pixels[x + y * screenWidth] = color;
+						}
+					} else {
+					}
+				}
+			} else {
+			}
+		}
+	}
+
 	// vxs: Vector cross product
 	public static double vxs(double x0, double y0, double x1, double y1) {
 		return x0*y1 - x1*y0;
@@ -251,7 +450,6 @@ public class WorldRendererSimple extends WorldRenderer {
 
 	@Override
 	public void render(final double px, final double py, final double pz, final double hAngle, final double vAngle, final int pSectorId, final World world) {
-
 		// Code is very ugly, because it`s history contains may years, many programming languages, many authors.
 		final int W = canvas.width;
 		final int H = canvas.height;
@@ -547,8 +745,27 @@ public class WorldRendererSimple extends WorldRenderer {
 				yBottom[xx] = Math.min(yBottom[xx], yBottomTmp[xx]);
 			}
 
+			LinkedListElement lle = sect.spritesList;
 
-//			System.out.println(rq.size());
+			while(lle != null) {
+				drawSprite((Sprite)lle, px, py, pz, psin, pcos, vAngle, view_cos, world);
+
+				lle = lle.listNext;
+			}
+
+			lle = sect.structuresList;
+			while(lle != null) {
+				drawSprite((Sprite)lle, px, py, pz, psin, pcos, vAngle, view_cos, world);
+
+				lle = lle.listNext;
+			}
+
+			lle = sect.entitiesList;
+			while(lle != null) {
+				drawSprite((Sprite)lle, px, py, pz, psin, pcos, vAngle, view_cos, world);
+
+				lle = lle.listNext;
+			}
 		} while(!rq.isEmpty()); // render any other queued sectors
 
 		textToDraw.add("Drawed sectors: " + secrorsRendered + "\n");
@@ -562,8 +779,6 @@ public class WorldRendererSimple extends WorldRenderer {
 		}
 
 		textToDraw.clear();
-
-//		System.out.println(secrorsRendered);
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import org.zizitop.pshell.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 import java.util.function.Consumer;
 
 /**
@@ -82,6 +83,50 @@ public class Level {
 		for(int i = 0; i < sectors.length; ++i) {
 			sectors[i].init(this, i);
 		}
+	}
+
+	public boolean lineIntersectsWalls(int startSectorId, double x1, double y1, double x2, double y2) {
+		List<Sector> toProceed = new ArrayList<>();
+		toProceed.add(sectors[startSectorId]);
+
+		int sectorIndex = 0;
+
+		while(sectorIndex < toProceed.size()) {
+			Sector ss = toProceed.get(sectorIndex++);
+
+			int i, j;
+
+			for(i = 1, j = 0; i < ss.verticies.length; j = i++) {
+				int wall = ss.walls[j];
+
+				int iv = ss.verticies[i];
+				int jv = ss.verticies[j];
+
+				double ix = verticies[iv*2 + 0], iy = verticies[iv*2 + 1];
+				double jx = verticies[jv*2 + 0], jy = verticies[jv*2 + 1];
+
+				if(Utils.lineSegmentIntersection(x1, y1, x2, y2, ix, iy, jx, jy, null)) {
+					if(wall < 0) {
+						Sector s = sectors[-(wall+1)];
+
+						// Sector is not visible
+						if(s.floor >= ss.ceiling || s.ceiling <= ss.floor) {
+							return true;
+						} else {
+							// Sector is visible and not been proceeded  -> proceed it
+							if(!toProceed.contains(s)) {
+								toProceed.add(s);
+							}
+						}
+
+					} else {
+						return true;
+					}
+				}
+			}
+		}
+
+		return false;
 	}
 
 	public void collideEntity(Entity e, int sectorId, Utils.DoubleVector velocity) {

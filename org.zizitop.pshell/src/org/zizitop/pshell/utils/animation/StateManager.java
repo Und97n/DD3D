@@ -23,11 +23,7 @@ public class StateManager implements Serializable {
 		
 		this.manager = manager;
 	}
-	
-	public void update() {
-		update(1);
-	}
-	
+
 	public void update(double timeMultiperForAnimation) {
 		StateManagerType type = manager.getStateManagerType();
 		

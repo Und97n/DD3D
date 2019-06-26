@@ -64,8 +64,8 @@ public abstract class WeaponNear extends Weapon {
 	}
 
 	@Override
-	public void update(Entity hero, World w) {
-		super.update(hero, w);
+	public void update(Entity hero, World w, double dt) {
+		super.update(hero, w, dt);
 
 		final int state = animation.getCurrentStateId();
 		final int stateDefault = getDefaultStateId();

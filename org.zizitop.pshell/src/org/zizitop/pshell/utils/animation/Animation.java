@@ -64,10 +64,6 @@ public class Animation {
 		}
 	}
 
-	public double update(double pointer) {
-		return update(pointer, 1);
-	}
-
 	public double update(double pointer, double multiplier) {
 		if(looped) {
 			pointer += step * multiplier;

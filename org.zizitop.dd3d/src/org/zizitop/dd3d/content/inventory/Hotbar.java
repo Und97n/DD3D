@@ -135,14 +135,14 @@ public class Hotbar implements Serializable {
 		}
 
 		for(int i = 0; i < SLOTS; ++i) {
-			double x = (81 + 34 * i) * scaleX;
-			double y = canvas.height - itHeight + 6 * scaleY;
+			double x = (95 + 2 + 23 * i) * scaleX;
+			double y = canvas.height - itHeight + 8 * scaleY;
 
-			double width = 28 * scaleX;
-			double height = 28 * scaleY;
+			double width = 16 * scaleX;
+			double height = 16 * scaleY;
 
 			if(i == currentItem) {
-				canvas.fillRect(0x9f9f9f, x, y, width, height);
+				canvas.fillRect(0x7f7f7f, x, y, width, height);
 			}
 
 			Item item = playerInventory.getItem(i);
@@ -176,7 +176,7 @@ public class Hotbar implements Serializable {
 	/**
 	 * Need update inventory every tick
 	 */
-	public void update(World w, Entity hero) {
+	public void update(World w, Entity hero, double dt) {
 		if(oldCurrentItem != currentItem) {
 			Item i = playerInventory.getItem(oldCurrentItem);
 
@@ -185,17 +185,17 @@ public class Hotbar implements Serializable {
 			}
 		}
 
-		updateSelectedItem(w, hero);
+		updateSelectedItem(w, hero, dt);
 	}
 
-	private void updateSelectedItem(World w, Entity hero) {
+	private void updateSelectedItem(World w, Entity hero, double dt) {
 		Item i = getCurrentItem();
 
 		if(i == null) {
 			return;
 		}
 
-		i.update(hero, w);
+		i.update(hero, w, dt);
 
 		if(i.needDeleteFromInventory()) {
 			playerInventory.replaceItem(null, currentItem);
